@@ -53,6 +53,7 @@
 <!-- fonts --> <link rel="stylesheet" href="https://use.typekit.net/bzk4ibc.css">
 <!-- tippy.js --> <link rel="stylesheet" href="https://unpkg.com/tippy.js@5/dist/svg-arrow.css"/>
 <!-- tilt.js --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js" />
+<!-- lightbox --> <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
 
 
 
@@ -307,6 +308,30 @@ p {
     object-fit: cover;
 }
 
+/* slide content - lightboxes */
+.mfp-no-margins .mfp-container {
+	padding: 0;
+}
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: all 0.3s ease-out; 
+	-moz-transition: all 0.3s ease-out; 
+	-o-transition: all 0.3s ease-out; 
+	transition: all 0.3s ease-out;
+}
+.mfp-with-zoom.mfp-ready .mfp-container {
+		opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+		opacity: 0.8;
+}
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
+
 /* slide content - general styling */
 .anouk, .dan, .luyi, .orna, .xinyu {
     width: 80%;
@@ -332,7 +357,7 @@ p {
 
 /* slide content - index */
 .index {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: auto;
     text-align: center;
@@ -478,7 +503,7 @@ p {
     -webkit-transition-duration: 0.5s;
 }
 .foot svg:hover, .foot a svg:hover {
-    stroke: {color:text}50;
+    stroke: {color:text}75;
     transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
     -moz-transition-duration: 0.5s;
@@ -660,7 +685,7 @@ iframe.tmblr-iframe {
                     </div>
                     <div class="anouk_wrap">
                         <div id="anouk_1">
-                            <img src="{image:anouk main}" alt="Huichol beaded bracelet" />
+                            <a class="lightbox" href="{image:anouk main}"><img class="lightbox" src="{image:anouk main}" alt="Huichol beaded bracelet" /></a>
                         </div>
                         <div id="anouk_2">
                             <h2>description</h2>
@@ -848,6 +873,7 @@ iframe.tmblr-iframe {
 <!-- bodymovin --> <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
 <!-- tippy.js --> <script src="https://unpkg.com/popper.js@1"></script><script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
 <!-- tilt.js --> <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+<!-- lightbox --> <script src="magnific-popup/jquery.magnific-popup.js"></script>
 
 <script> 
 // lottie/bodymovin icon animation
@@ -899,6 +925,34 @@ $('.sticker').tilt({
     glare: true,
     maxGlare: 1.0
 })
+
+// lightbox
+$(document).ready(function() {
+    $('.lightbox').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: false,
+		fixedContentPos: true,
+		mainClass: 'mfp-no-margins mfp-with-zoom',
+		image: {
+			verticalFit: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300 
+		}
+	});
+});
+
+// removes tumblr redirects
+function noHrefLi(){
+    var linkSet = document.querySelectorAll('a[href*="href.li/?"]');
+    Array.prototype.forEach.call(linkSet,function(el,i){
+        var theLink = linkSet[i].getAttribute('href').split("href.li/?")[1];
+        linkSet[i].setAttribute("href",theLink);
+    });
+}
+noHrefLi(); 
 </script>
 <!-- END SCRIPTS -->
 
