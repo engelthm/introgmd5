@@ -373,7 +373,7 @@ p {
     border: 2.5px solid {color:text};
     object-fit: cover;
 }
-#anouk_2 h2:not(:first-child) {
+#anouk_2 h2:not(:first-child), #anouk_3 h2:not(:first-child) {
     margin-top: 50px;
 }
 #anouk_4 {
@@ -381,6 +381,7 @@ p {
     grid-template-columns: 47.5% 47.5%;
     grid-template-rows: 75% 75%;
     gap: 2.5% 1.5%;
+    margin-bottom: 150px;
 }
 #anouk_4 img {
     width: 100%;
@@ -460,12 +461,29 @@ p {
 
 /* FOOTER */
 .footwrap {
-    bottom: 0;
+    margin-bottom: 5px;
     left: 0;
     width: 100%;
     height: auto;
+    margin-top: 100px;
     border-top: 2.5px solid {color:text};
     z-index: 60;
+}
+.foot svg, .foot a svg {
+    width: 20px;
+    stroke: {color:text};
+    transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+}
+.foot svg:hover, .foot a svg:hover {
+    stroke: {color:text}50;
+    transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    cursor: url(https://i.imgur.com/YmCrZ2z.png),progress!important;
 }
 .foot b {
     font-size: 0.75em;
@@ -473,8 +491,30 @@ p {
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
-#top, #cred, #github {
+#top [class^="label_"] {
     position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    padding: 0;
+    display: inline;
+    border: none;
+}
+#top [class^="label_"]:hover {
+    background-color: transparent;
+}
+#github svg {
+    position: absolute;
+    margin-top: -35px;
+    right: 20px;
+}
+#cred {
+    text-align: center;
+    margin: 5px auto 0;
+    padding: 15px 20px;
+}
+#cred svg {
+    margin: 0 2.5px;
+    margin-bottom: -5px;
 }
 
 
@@ -518,10 +558,11 @@ a:hover { cursor: url(https://i.imgur.com/YmCrZ2z.png),progress!important; }
 
 /* tooltip styling */
 .tippy-tooltip.custom-theme {
-    font-size: 0.75em;
+    font-size: 0.5em;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     text-align: center;
+    border-radius: 2.5px;
     color: {color:background};
     background-color: {color:text};
 }
@@ -630,14 +671,29 @@ iframe.tmblr-iframe {
                     </div>
                     <div class="anouk_wrap_2">
                         <div id="anouk_3">
-                            <h2>Analysis</h2>
+                            <h2>Material Analysis</h2>
                             <p>Text</p>
+                            <h2>Contextual Analysis</h2>
+                            <p>Beadwork art in Mexico is usually called Huichol beadwork as it was created and popularized by the Huichol, a group of several indigenous peoples. Huichol art also includes yarn painting; they use a vibrant rainbow of colors and depict either traditional symbols or non-traditional. My object specifically depicts a woman’s face in skull makeup, or a calavera. Sugar skulls & skulls in general hold a lot of importance in Mexican culture - ancient tradition included offering skulls to the god of the underworld, Mictlantecuhtli. Spanish colonization erased most of these traditions but they were kept alive by maintaining the symbol of a skull in a sweet candy (sugar skulls) - an entire holiday revolves around skulls & paying respects to the dead (Dia de Muertos).</p>
                         </div>
                         <div id="anouk_4">
                             <img src="{image:anouk sub 1}" alt="Huichol beaded bracelet" data-featherlight="image" />
                             <img src="{image:anouk sub 2}" alt="Huichol beaded bracelet" data-featherlight="image" />
                             <img src="{image:anouk sub 3}" alt="Huichol beaded bracelet" data-featherlight="image" />
                             <img src="{image:anouk sub 4}" alt="Huichol beaded bracelet" data-featherlight="image" />
+                        </div>
+                    </div>
+                </div>
+                <div class="footwrap">
+                    <div class="foot">
+                        <div id="top">
+                            <label for="button_a" class="label_a" title="back to top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="16 12 12 8 8 12"></polyline><line x1="12" y1="16" x2="12" y2="8"></line></svg></label>
+                        </div>
+                        <div id="cred">
+                            <b>made with <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> by five guys</b>
+                        </div>
+                        <div id="github">
+                            <a href="https://raw.githubusercontent.com/engelthm/introgmd5/main/code/five%20guys" title="View the code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
                         </div>
                     </div>
                 </div>
@@ -685,6 +741,19 @@ iframe.tmblr-iframe {
                         </div>
                     </div>
                 </div>
+                <div class="footwrap">
+                    <div class="foot">
+                        <div id="top">
+                            <label for="button_a" class="label_a" title="back to top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="16 12 12 8 8 12"></polyline><line x1="12" y1="16" x2="12" y2="8"></line></svg></label>
+                        </div>
+                        <div id="cred">
+                            <b>made with <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> by five guys</b>
+                        </div>
+                        <div id="github">
+                            <a href="https://raw.githubusercontent.com/engelthm/introgmd5/main/code/five%20guys" title="View the code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                        </div>
+                    </div>
+                </div>
             </section>
             
         <!-- slide luyi -->
@@ -697,6 +766,19 @@ iframe.tmblr-iframe {
                     </div>
                     <div class="sticker">
                         <img data-tilt data-tilt-max="20" data-tilt-speed="400" data-tilt-perspective="500" src="{image:luyi}" />
+                    </div>
+                </div>
+                <div class="footwrap">
+                    <div class="foot">
+                        <div id="top">
+                            <label for="button_a" class="label_a" title="back to top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="16 12 12 8 8 12"></polyline><line x1="12" y1="16" x2="12" y2="8"></line></svg></label>
+                        </div>
+                        <div id="cred">
+                            <b>made with <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> by five guys</b>
+                        </div>
+                        <div id="github">
+                            <a href="https://raw.githubusercontent.com/engelthm/introgmd5/main/code/five%20guys" title="View the code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -713,6 +795,19 @@ iframe.tmblr-iframe {
                         <img data-tilt data-tilt-max="20" data-tilt-speed="400" data-tilt-perspective="500" src="{image:orna}" />
                     </div>
                 </div>
+                <div class="footwrap">
+                    <div class="foot">
+                        <div id="top">
+                            <label for="button_a" class="label_a" title="back to top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="16 12 12 8 8 12"></polyline><line x1="12" y1="16" x2="12" y2="8"></line></svg></label>
+                        </div>
+                        <div id="cred">
+                            <b>made with <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> by five guys</b>
+                        </div>
+                        <div id="github">
+                            <a href="https://raw.githubusercontent.com/engelthm/introgmd5/main/code/five%20guys" title="View the code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                        </div>
+                    </div>
+                </div>
             </section>
             
         <!-- slide xinyu -->
@@ -727,22 +822,22 @@ iframe.tmblr-iframe {
                         <img data-tilt data-tilt-max="20" data-tilt-speed="400" data-tilt-perspective="500" src="{image:xinyu}" />
                     </div>
                 </div>
+                <div class="footwrap">
+                    <div class="foot">
+                        <div id="top">
+                            <label for="button_a" class="label_a" title="back to top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="16 12 12 8 8 12"></polyline><line x1="12" y1="16" x2="12" y2="8"></line></svg></label>
+                        </div>
+                        <div id="cred">
+                            <b>made with <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> by five guys</b>
+                        </div>
+                        <div id="github">
+                            <a href="https://raw.githubusercontent.com/engelthm/introgmd5/main/code/five%20guys" title="View the code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div> <!-- slideswrap end-->
     </div> <!-- slideshow id end -->
-    <div class="footwrap">
-        <div class="foot">
-            <div id="top">
-                <b><a href="">to top</a></b>
-            </div>
-            <div id="cred">
-                <b>made with 🫶 by dan</b>
-            </div>
-            <div id="github">
-                <b><a href=""></a></b>
-            </div>
-        </div>
-    </div>
 </div> <!-- slideshow class end --> 
 <!-- END HTML -->
 
@@ -772,9 +867,10 @@ let animationMenu = bodymovin.loadAnimation({
 });
 
 // tippy.js
-tippy('a[title]', {
+tippy('[title]', {
     theme: 'custom',
     arrow: tippy.roundArrow,
+    followCursor: true,
     zIndex: 9999999999,
     maxWidth: 300,
     content(reference) {
