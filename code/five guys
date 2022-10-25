@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+
+
+<!--
+                
+                GMD YR 1 - TEAM 5
+                WEB DESIGNER - DAN HUGHES-KISTNER
+                
+-->
+
+
+<head>
+<title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+
+
+<!-- META TAGS -->
+<meta name="image:anouk" content="" />
+<meta name="image:dan" content="" />
+<meta name="image:luyi" content="" />
+<meta name="image:orna" content="" />
+<meta name="image:xinyu" content="" />
+
+<meta name="image:anouk main" content="" />
+<meta name="image:anouk sub 1" content="" />
+<meta name="image:anouk sub 2" content="" />
+<meta name="image:anouk sub 3" content="" />
+<meta name="image:anouk sub 4" content="" />
+
+<meta name="image:dan main" content="" />
+<meta name="image:dan sub 1" content="" />
+<meta name="image:dan sub 2" content="" />
+<meta name="image:dan sub 3" content="" />
+<meta name="image:dan sub 4" content="" />
+
+<meta name="image:luyi main" content="" />
+
+<meta name="image:orna main" content="" />
+
+<meta name="image:xinyu main" content="" />
+
+<meta name="color:text" content="#1e1e1e" />
+<meta name="color:background" content="#f8f8ef" />
+<meta name="color:blue" content="#1b38ce" />
+<meta name="color:purple" content="#d4b5ff" />
+<meta name="color:green" content="#dfee62" />
+<meta name="color:gray" content="#a9b5bd" />
+
+<meta name="text:font size" content="15px" />
+
+
+<!-- IMPORT LINKS -->
+<!-- fonts --> <link rel="stylesheet" href="https://use.typekit.net/bzk4ibc.css">
+<!-- tippy.js --> <link rel="stylesheet" href="https://unpkg.com/tippy.js@5/dist/svg-arrow.css"/>
+<!-- tilt.js --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js" />
+
+
+
+<style type="text/css">
+
+
+/* GENERAL CSS */
+/* general styling */
+#s-m-t-tooltip, #s-m-t-tooltip div {
+    -webkit-animation: none;
+    -o-animation: none;
+    -moz-animation: none;
+    animation: none;
+}
+body {
+    font-family: neue-haas-unica, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: {text:font size};
+    text-decoration: none;
+    text-transform: none;
+    overflow-wrap: break-word;
+    line-height: 125%;
+    background-color: {color:background};
+    color: {color:text};
+    scroll-behavior: smooth;
+}
+a {
+    color: {color:blue};
+    text-decoration: none;
+    transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+}
+a:hover {
+    color: {color:purple};
+    text-decoration: none;
+    transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+}
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.5em;
+    font-family: antique-olive-nord, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.5px;
+    text-transform: lowercase;
+    line-height: 100%;
+}
+p {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* SLIDESHOW */
+/* general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#slideshow, #navigation {
+    flex: initial;
+    display: block;
+}
+
+/* navigation */
+#navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 60;
+    background-color: transparent;
+}
+.click {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: {color:background};
+    border-bottom: 2.5px solid {color:text};
+}
+.click .clickmenu {
+    margin: 15px 0;
+    width: 30px;
+    height: auto;
+    stroke: {color:text};
+    transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+}
+#hover {
+    display: none;
+}
+[class^="label_"]:hover #hover {
+    display: block;
+}
+[class^="label_"]:hover #normal {
+    display: none;
+}
+[class^="label_"] {
+    display: block;
+    padding: 10px 15px;
+    font-size: 0.75em;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-bottom: 2.5px solid {color:text};
+    background-color: {color:background};
+    transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+}
+[class^="label_"]:hover {
+    color: {color:background};
+    background-color: {color:text};
+    cursor: url(https://i.imgur.com/YmCrZ2z.png),progress!important;
+    transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+}
+.naviwrap {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out; 
+    -moz-transition: max-height 0.3s ease-out; 
+    -webkit-transition: max-height 0.3s ease-out; 
+    -o-transition: max-height 0.3s ease-out; 
+    -ms-transition: max-height 0.3s ease-out;
+}
+#button_a:checked ~ #navigation .label_a,
+#button_b:checked ~ #navigation .label_b,
+#button_c:checked ~ #navigation .label_c,
+#button_d:checked ~ #navigation .label_d, 
+#button_e:checked ~ #navigation .label_e, 
+#button_f:checked ~ #navigation .label_f {
+    color: {color:background};
+    background-color: {color:text};
+    cursor: default;
+}
+#button_a:checked ~ #navigation .label_a #hover,
+#button_b:checked ~ #navigation .label_b #hover,
+#button_c:checked ~ #navigation .label_c #hover,
+#button_d:checked ~ #navigation .label_d #hover, 
+#button_e:checked ~ #navigation .label_e #hover, 
+#button_f:checked ~ #navigation .label_f #hover {
+    display: block;
+}
+#button_a:checked ~ #navigation .label_a #normal,
+#button_b:checked ~ #navigation .label_b #normal,
+#button_c:checked ~ #navigation .label_c #normal,
+#button_d:checked ~ #navigation .label_d #normal, 
+#button_e:checked ~ #navigation .label_e #normal, 
+#button_f:checked ~ #navigation .label_f #normal {
+    display: none;
+}
+
+/* slides */
+#slideshow {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* change to scroll? */
+    z-index: 50;
+}
+.slideswrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out;
+    -webkit-transition: transform 0.5s ease-in-out;
+}
+.slideswrap h1 {
+    padding: 50px 0 0;
+    text-align: center;
+}
+#button_a:checked ~ #slideshow .slideswrap {
+    -webkit-transform: translateY(0);
+    transform: translateY(0); 
+}
+#button_b:checked ~ #slideshow .slideswrap {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); 
+}
+#button_c:checked ~ #slideshow .slideswrap {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%); 
+}
+#button_d:checked ~ #slideshow .slideswrap {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%); 
+}
+#button_e:checked ~ #slideshow .slideswrap {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%); 
+}
+#button_f:checked ~ #slideshow .slideswrap {
+    -webkit-transform: translateY(-500%);
+    transform: translateY(-500%); 
+}
+[class^="slide_"] {
+    overflow: auto;
+    position: relative;
+    width: inherit;
+    height: inherit;
+}
+
+/* slide content - sticker animation */
+.sticker img {    
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: auto;
+}
+
+/* slide content - 360 table [FILL LATER] */
+.anouk_360, 
+.dan_360, 
+.luyi_360, 
+.orna_360, 
+.xinyu_360 {
+    position: absolute;
+    width: 100vw;
+    height: 500px;
+    top: 0;
+    left: 0;
+    margin: 0 0 50px
+    background-size: cover;
+    border-bottom: 2.5px solid {color:text};
+}
+.anouk_360 img, 
+.dan_360 img, 
+.luyi_360 img, 
+.orna_360 img, 
+.xinyu_360 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* slide content - general styling */
+.anouk, .dan, .luyi, .orna, .xinyu {
+    width: 80%;
+    margin-top: 550px;
+    margin-bottom: 50px;
+    margin-left: 10%;
+}
+.anouk h2, 
+.dan h2, 
+.luyi h2, 
+.orna h2, 
+.xinyu h2 {
+    font-size: 1.5em;
+    line-height: 100%;
+}
+.anouk p, 
+.dan p, 
+.luyi p, 
+.orna p, 
+.xinyu p {
+    margin: 10px 0;
+}
+
+/* slide content - index */
+.index {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.index h1 {  
+    font-size: 12.5em;
+    line-height: 75%;
+}
+.index b {
+    font-size: 0.75em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* slide content - anouk */
+.anouk_wrap, .anouk_wrap_2 {
+    margin: 100px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+.anouk .sticker img {
+    margin-left: -5%;
+    margin-top: 650px;
+}
+#anouk_1, #anouk_2, #anouk_3, #anouk_4 {
+    width: 47.5%;
+}
+#anouk_1 img {
+    width: 100%;
+    height: 500px;
+    border-radius: 0;
+    border: 2.5px solid {color:text};
+    object-fit: cover;
+}
+#anouk_2 h2:not(:first-child) {
+    margin-top: 50px;
+}
+#anouk_4 {
+    display: grid;
+    grid-template-columns: 47.5% 47.5%;
+    grid-template-rows: 75% 75%;
+    gap: 2.5% 1.5%;
+}
+#anouk_4 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: 2.5px solid {color:text};
+    object-fit: cover;
+}
+
+/* slide content - dan */
+.dan_wrap {
+    margin: 100px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+.dan .sticker img {
+    right: 5%;
+    margin-top: 650px;
+}
+#dan_1, #dan_2 {
+    width: 47.5%;
+}
+#dan_1 h2:not(:first-child) {
+    margin-top: 50px;
+}
+#dan_2 img {
+    width: 100%;
+    height: 500px;
+    border-radius: 0;
+    border: 2.5px solid {color:text};
+    object-fit: cover;
+}
+#dan_3 {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 75%;
+    column-gap: 1%;
+    margin-top: -25px;
+}
+#dan_3 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: 2.5px solid {color:text};
+    object-fit: cover;
+}
+#dan_4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+#dan_4_sub, #dan_4_sub_1 {
+    width: 47.5%;
+}
+
+/* slide content - luyi */
+.luyi .sticker img {
+    margin-left: -5%;
+    margin-top: 625px;
+}
+
+/* slide content - orna */
+.orna .sticker img {
+    margin-left: -5%;
+    margin-top: 625px;
+}
+
+/* slide content - xinyu */
+.xinyu .sticker img {
+    margin-left: -5%;
+    margin-top: 625px;
+}
+
+
+/* FOOTER */
+.footwrap {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    border-top: 2.5px solid {color:text};
+    z-index: 60;
+}
+.foot b {
+    font-size: 0.75em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+#top, #cred, #github {
+    position: absolute;
+}
+
+
+/* RESPONSIVE DESIGN */
+/* tablet size*/
+@media screen and (max-width: 1000px) {
+    .posts {
+        
+    }
+}
+
+/* phone size*/
+@media screen and (max-width: 500px) {
+    .posts {
+        
+    }
+}
+
+
+/* EXTRA CSS */
+/* cursor */
+* { cursor: url(https://i.imgur.com/d7VhVIg.png),auto }
+a:hover { cursor: url(https://i.imgur.com/YmCrZ2z.png),progress!important; }
+
+/* selection */
+::-moz-selection, ::selection { background-color: {color:purple}; }
+
+/* scrollbar appearence */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 0px;
+    background-color: {color:text}25;
+}   
+::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background-color: {color:text};
+}
+[class^="slide_"]::-webkit-scrollbar {
+    display: none;
+}
+
+/* tooltip styling */
+.tippy-tooltip.custom-theme {
+    font-size: 0.75em;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: center;
+    color: {color:background};
+    background-color: {color:text};
+}
+.tippy-tooltip.custom-theme .tippy-svg-arrow { fill: {color:text}; }
+
+/* tumblr controls */
+iframe.tmblr-iframe {
+    z-index:10000!important;
+    top: 1%!important;
+    right: 1%!important;
+    opacity: 1.0;
+    transform: scale(0.50);
+    transform-origin: 100% 0;
+    -webkit-transform: scale(0.50);
+    -webkit-transform-origin: 100% 0;
+    -o-transform: scale(0.50);
+    -o-transform-origin: 100% 0;
+    -moz-transform: scale(0.50);
+    -moz-transform-origin: 100% 0;
+    -ms-transform: scale(0.50);
+    -ms-transform-origin: 100% 0;
+}
+.tmblr-iframe--app-cta-button { display: none!important; }
+
+
+/* END CSS STYLING*/
+
+
+</style>
+</head>
+<body>
+
+
+<!-- SLIDESHOW -->
+<div class="slideshow">
+    <input hidden type="radio" name="slideshow" id="button_a" checked/>
+    <input hidden type="radio" name="slideshow" id="button_b"/>
+    <input hidden type="radio" name="slideshow" id="button_c"/>
+    <input hidden type="radio" name="slideshow" id="button_d"/> 
+    <input hidden type="radio" name="slideshow" id="button_e"/> 
+    <input hidden type="radio" name="slideshow" id="button_f"/> 
+    <div id="navigation">
+        <div class="click">
+            <div class="clickmenu"></div>
+        </svg>
+        </div>
+        <div class="naviwrap">
+            <label for="button_a" class="label_a">
+                <span id="normal">overveiw</span>
+                <span id="hover">overveiw • all of the five guys' objects</span>
+            </label>
+            <label for="button_b" class="label_b">
+                <span id="normal">Anouk</span>
+                <span id="hover">Anouk • Huichol Beaded Bracelet</span>
+            </label>
+            <label for="button_c" class="label_c">
+                <span id="normal">Dan</span>
+                <span id="hover">Dan • Egorov Tarot Cards</span>
+            </label>
+            <label for="button_d" class="label_d">
+                <span id="normal">Luyi</span>
+                <span id="hover">Luyi • Chinese Zodiac Necklace</span>
+            </label>
+            <label for="button_e" class="label_e">
+                <span id="normal">Orna</span>
+                <span id="hover">Orna • Silver Hug Ring</span>
+            </label>
+            <label for="button_f" class="label_f">
+                <span id="normal">Xinyu</span>
+                <span id="hover">Xinyu • Namo Amitabha Amulet</span>
+            </label>
+        </div>
+    </div>
+    <div id="slideshow">
+        <div class="slideswrap">  
+        
+        <!-- slide index -->
+            <section class="slide_index">
+                <div class="index">
+                    <b>gmd year 1 • cyan • small team 5</b>
+                    <h1>five<br>guys</h1>
+                </div>
+            </section>
+            
+        <!-- slide anouk -->
+            <section class="slide_anouk">
+                <div class="anouk">
+                    <h1>Huichol Beaded Bracelet</h1>
+                    <div class="anouk_360">
+                        <img src="{image:anouk main}" alt="Huichol beaded bracelet" /> 
+                        <!-- PUT HTML 360 TABLE FILE HERE -->
+                    </div>
+                    <div class="sticker">
+                        <img data-tilt data-tilt-max="20" data-tilt-speed="400" data-tilt-perspective="500" src="{image:anouk}" />
+                    </div>
+                    <div class="anouk_wrap">
+                        <div id="anouk_1">
+                            <img src="{image:anouk main}" alt="Huichol beaded bracelet" />
+                        </div>
+                        <div id="anouk_2">
+                            <h2>description</h2>
+                            <p>A souvenir bracelet bought from a Mexican gift shop. Inspired by traditional Huichol beadwork, an art form developed by the north-western Indigenous peoples of Mexico. The bracelet depicts a woman wearing skull Day of the Dead makeup.</p>
+                            <h2>Personal Meaning</h2>
+                            <p>Represents my love for travel; I have a lot of souvenirs from a bunch of different places but this one is one of my favorites.</p>
+                        </div>
+                    </div>
+                    <div class="anouk_wrap_2">
+                        <div id="anouk_3">
+                            <h2>Analysis</h2>
+                            <p>Text</p>
+                        </div>
+                        <div id="anouk_4">
+                            <img src="{image:anouk sub 1}" alt="Huichol beaded bracelet" data-featherlight="image" />
+                            <img src="{image:anouk sub 2}" alt="Huichol beaded bracelet" data-featherlight="image" />
+                            <img src="{image:anouk sub 3}" alt="Huichol beaded bracelet" data-featherlight="image" />
+                            <img src="{image:anouk sub 4}" alt="Huichol beaded bracelet" data-featherlight="image" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        <!-- slide dan -->
+            <section class="slide_dan">
+                <div class="dan">
+                    <h1>Egorov Tarot Cards</h1>
+                    <div class="dan_360">
+                        <img src="{image:dan main}" alt="Egorov tarot cards" /> 
+                        <!-- PUT HTML 360 TABLE FILE HERE -->
+                    </div>
+                    <div class="sticker">
+                        <img data-tilt data-tilt-max="20" data-tilt-speed="400" data-tilt-perspective="500" src="{image:dan}" />
+                    </div>
+                    <div class="dan_wrap">
+                        <div id="dan_1">
+                            <h2>description</h2>
+                            <p>A somewhat worn deck of cards measuring X cm tall, X cm wide, and X cm deep. Its base color is black, though it has been covered with Eastern Orthodox-style lineart in both maroon and gold. Each card within is different, with its design drawn in accord with the card’s specific meaning. There are 78 cards, 22 of which are the Major Arcana, with the remaining 56 split into four suits; swords, cups, pentacles, and wands. It also includes a guidebook that describes Tarot as a practice, the definition of each card, and the creator’s personal relationship with Tarot.</p>
+                            <h2>Personal Meaning</h2>
+                            <p>This tarot deck was given to me by my mother, something she bought in the 1980s at a pawn shop in San Fransisco. Its meaningfulness is for me rooted in my personal interest in the subjects regarding the cards; culture, linguistics, and mythology. I also find its relatively recent surge in popularity, especially online, to be particularly interesting. In more specific terms, something so heavily associated with the occult and pagan practices has been appropriated for a Western European, Christian audience. Coupled with the creator’s—Alexander Egorov—hedonistic descriptions of both himself (calling himself “The Sun Genuis”, which he also renames one of the cards) and the practice of reading Tarot itself, forces one to imagine that Egorov wanted nothing more than for a greater audience to take on this spiritual practice after him and revere him for it. </p>
+                        </div>
+                        <div id="dan_2">
+                            <img src="{image:dan main}" alt="Egorov tarot cards" />
+                        </div>
+                    </div>
+                    <div class="dan_wrap_2">
+                        <div id="dan_3">
+                            <img src="{image:dan sub 1}" alt="Egorov tarot cards" data-featherlight="image" />
+                            <img src="{image:dan sub 2}" alt="Egorov tarot cards" data-featherlight="image" />
+                            <img src="{image:dan sub 3}" alt="Egorov tarot cards" data-featherlight="image" />
+                            <img src="{image:dan sub 4}" alt="Egorov tarot cards" data-featherlight="image" />
+                        </div>
+                        <div id="dan_4">
+                            <div id="dan_4_sub">
+                                <h2>Material analysis</h2>
+                                <p>Drawn with rich colors and gold accents in an Eastern Orthodox style, the artistic origin of the drawings, and its creator, both lie in Russia, though the cards themselves are written in English, German, and French. All ironic considering Tarot’s Italian origins. It’s Christianized, so many of the titles of the Major Arcana have been exchanged. For example, the High Priestess is instead "the Science", the Empress is "Fertility", and the Emperor is "Man of Knowledge", etc. It’s particularly rare, as I imagine not many copies were ever printed, with any selling online (and I have only found two) for over $200.</p>
+                            </div>
+                            <div id="dan_4_sub_1">
+                                <h2>Contextual analysis</h2>
+                                <p>All of these things combined lead to something that is, to me, quite remarkable. That this deck of cards sits at the intersection of tradition, religion, and culture, and was important enough to someone that it might stand the test of all three. Tarot has its origins as a playing card as well as for practices like divination—which would have been considered witchcraft—but is styled to be accepted by western European Christians, using a Russian art style.
+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        <!-- slide luyi -->
+            <section class="slide_luyi">
+                <div class="luyi">
+                    <h1>Chinese Zodiac Necklace</h1>
+                    <div class="luyi_360">
+                        <img src="{image:luyi main}" alt="Chinese Zodiac bracelet" /> 
+                        <!-- PUT HTML 360 TABLE FILE HERE -->
+                    </div>
+                    <div class="sticker">
+                        <img data-tilt data-tilt-max="20" data-tilt-speed="400" data-tilt-perspective="500" src="{image:luyi}" />
+                    </div>
+                </div>
+            </section>
+            
+        <!-- slide orna -->
+            <section class="slide_orna">
+                <div class="orna">
+                    <h1>Silver Hug Ring</h1>
+                    <div class="orna_360">
+                        <img src="{image:orna main}" alt="Silver Hug Ring" /> 
+                        <!-- PUT HTML 360 TABLE FILE HERE -->
+                    </div>
+                    <div class="sticker">
+                        <img data-tilt data-tilt-max="20" data-tilt-speed="400" data-tilt-perspective="500" src="{image:orna}" />
+                    </div>
+                </div>
+            </section>
+            
+        <!-- slide xinyu -->
+            <section class="slide_xinyu">
+                <div class="xinyu">
+                    <h1>Namo Amitabha Amulet</h1>
+                    <div class="xinyu_360">
+                        <img src="{image:xinyu main}" alt="Namo Amitabha amulet" /> 
+                        <!-- PUT HTML 360 TABLE FILE HERE -->
+                    </div>
+                    <div class="sticker">
+                        <img data-tilt data-tilt-max="20" data-tilt-speed="400" data-tilt-perspective="500" src="{image:xinyu}" />
+                    </div>
+                </div>
+            </section>
+        </div> <!-- slideswrap end-->
+    </div> <!-- slideshow id end -->
+    <div class="footwrap">
+        <div class="foot">
+            <div id="top">
+                <b><a href="">to top</a></b>
+            </div>
+            <div id="cred">
+                <b>made with 🫶 by dan</b>
+            </div>
+            <div id="github">
+                <b><a href=""></a></b>
+            </div>
+        </div>
+    </div>
+</div> <!-- slideshow class end --> 
+<!-- END HTML -->
+
+
+<!-- SCRIPTS -->
+<!-- jquery import --> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- lottie --> <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<!-- bodymovin --> <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+<!-- tippy.js --> <script src="https://unpkg.com/popper.js@1"></script><script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
+<!-- tilt.js --> <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+<script> 
+// lottie/bodymovin icon animation
+let iconMenu = document.querySelector('.clickmenu');
+let animationMenu = bodymovin.loadAnimation({
+    container: iconMenu,
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: "https://raw.githubusercontent.com/engelthm/introgmd5/main/assets/menuV2"
+    });
+    var directionMenu = 1;
+        iconMenu.addEventListener('click', (e) => {
+        animationMenu.setDirection(directionMenu);
+        animationMenu.play();
+        directionMenu = -directionMenu;
+});
+
+// tippy.js
+tippy('a[title]', {
+    theme: 'custom',
+    arrow: tippy.roundArrow,
+    zIndex: 9999999999,
+    maxWidth: 300,
+    content(reference) {
+        const title = reference.getAttribute('title');
+        reference.removeAttribute('title');
+        return title;
+    },
+});
+
+// dropdown navigation
+var navi = document.getElementsByClassName("click");
+var i;
+for (i = 0; i < navi.length; i++) {
+    navi[i].addEventListener("click", function() {
+    var naviwrap = this.nextElementSibling;
+    if (naviwrap.style.maxHeight){
+        naviwrap.style.maxHeight = null;
+        } else {
+        naviwrap.style.maxHeight = naviwrap.scrollHeight + "px";
+        } 
+    });
+}
+
+// tilt.js
+$('.sticker').tilt({
+    glare: true,
+    maxGlare: 1.0
+})
+</script>
+<!-- END SCRIPTS -->
+
+
+<!-- END CODE -->
+</body>
+</html>
