@@ -3,10 +3,11 @@
 
 <!--
                 
-                GMD YR 1 - TEAM 5
-                WEB DESIGNER - DAN HUGHES-KISTNER
+                GMD YR 1 - INTRO TO GMD, TEAM 5
+                WEB DESIGN/DEVELOPMENT - DAN HUGHES-KISTNER (21002196)
                 
                 CREDITS -
+                design identity by anouk allen-mills
                 carousel navigation by yeolithm
                 icons by useanimations (lottiefiles w/bodymovin)
                 tooltips by tippy.js
@@ -43,10 +44,22 @@
 <meta name="image:dan sub 4" content="" />
 
 <meta name="image:luyi main" content="" />
+<meta name="image:luyi sub 1" content="" />
+<meta name="image:luyi sub 2" content="" />
+<meta name="image:luyi sub 3" content="" />
+<meta name="image:luyi sub 4" content="" />
 
 <meta name="image:orna main" content="" />
+<meta name="image:orna sub 1" content="" />
+<meta name="image:orna sub 2" content="" />
+<meta name="image:orna sub 3" content="" />
+<meta name="image:orna sub 4" content="" />
 
 <meta name="image:xinyu main" content="" />
+<meta name="image:xinyu sub 1" content="" />
+<meta name="image:xinyu sub 2" content="" />
+<meta name="image:xinyu sub 3" content="" />
+<meta name="image:xinyu sub 4" content="" />
 
 <meta name="color:text" content="#1e1e1e" />
 <meta name="color:background" content="#f8f8ef" />
@@ -54,8 +67,6 @@
 <meta name="color:purple" content="#d4b5ff" />
 <meta name="color:green" content="#dfee62" />
 <meta name="color:gray" content="#a9b5bd" />
-
-<meta name="text:font size" content="15px" />
 
 
 <!-- IMPORT LINKS -->
@@ -81,7 +92,7 @@ body {
     font-family: neue-haas-unica, sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: {text:font size};
+    font-size: 17.5px;
     text-decoration: none;
     text-transform: none;
     overflow-wrap: break-word;
@@ -90,21 +101,25 @@ body {
     color: {color:text};
     scroll-behavior: smooth;
 }
+body.night {
+    background-color: {color:text};
+    color: {color:background};
+}
 a {
     color: {color:blue};
     text-decoration: none;
-    transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 a:hover {
     color: {color:purple};
     text-decoration: none;
-    transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 h1, h2, h3, h4, h5 {
     margin: 0;
@@ -121,6 +136,14 @@ p {
     padding: 0;
     margin: 0;
 }
+svg {
+    width: 20px;
+    height: auto;
+    stroke: {color:text};
+}
+body.night svg {
+    stroke: {color:background};
+}
 
 
 /* SLIDESHOW */
@@ -133,6 +156,28 @@ p {
 #slideshow, #navigation {
     flex: initial;
     display: block;
+}
+
+/* dark mode toggle */
+.daynight {
+    position: fixed;
+    top: 2px;
+    right: 15px;
+}
+.daynight .toggle {
+    margin: 15px 0;
+    width: 25px;
+    height: auto;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+.daynight .toggle path {
+    stroke: {color:text};
+}
+body.night .daynight .toggle path {
+    stroke: {color:background};
 }
 
 /* navigation */
@@ -153,15 +198,27 @@ p {
     background-color: {color:background};
     border-bottom: 2.5px solid {color:text};
 }
-.click .clickmenu {
+body.night .click {
+    background-color: {color:text};
+    border-bottom: 2.5px solid {color:background};
+}
+.click .menu {
     margin: 15px 0;
-    width: 30px;
+    width: 25px;
     height: auto;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+.click .menu path {
     stroke: {color:text};
-    transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -webkit-transition-duration: 0.5s;
+}
+body.night .click .menu path {
+    stroke: {color:background};
+}
+.click:hover .menu {
+    cursor: url(https://i.imgur.com/YmCrZ2z.png),progress!important;
 }
 #hover {
     display: none;
@@ -180,19 +237,15 @@ p {
     text-transform: uppercase;
     border-bottom: 2.5px solid {color:text};
     background-color: {color:background};
-    transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -webkit-transition-duration: 0.5s;
+}
+body.night [class^="label_"] {
+    border-bottom: 2.5px solid {color:background};
+    background-color: {color:text};
 }
 [class^="label_"]:hover {
     color: {color:background};
     background-color: {color:text};
     cursor: url(https://i.imgur.com/YmCrZ2z.png),progress!important;
-    transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -webkit-transition-duration: 0.5s;
 }
 .naviwrap {
     max-height: 0;
@@ -212,6 +265,15 @@ p {
     color: {color:background};
     background-color: {color:text};
     cursor: default;
+}
+body.night #button_a:checked ~ #navigation .label_a,
+body.night #button_b:checked ~ #navigation .label_b,
+body.night #button_c:checked ~ #navigation .label_c,
+body.night #button_d:checked ~ #navigation .label_d, 
+body.night #button_e:checked ~ #navigation .label_e, 
+body.night #button_f:checked ~ #navigation .label_f {
+    color: {color:text};
+    background-color: {color:background};
 }
 #button_a:checked ~ #navigation .label_a #hover,
 #button_b:checked ~ #navigation .label_b #hover,
@@ -244,10 +306,10 @@ p {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.5s ease-in-out;
-    -o-transition: transform 0.5s ease-in-out;
-    -moz-transition: transform 0.5s ease-in-out;
-    -webkit-transition: transform 0.5s ease-in-out;
+    transition: transform 0.75s ease-in-out;
+    -o-transition: transform 0.75s ease-in-out;
+    -moz-transition: transform 0.75s ease-in-out;
+    -webkit-transition: transform 0.75s ease-in-out;
 }
 .slideswrap h1 {
     padding: 50px 0 0;
@@ -306,6 +368,13 @@ p {
     margin: 0 0 50px
     background-size: cover;
     border-bottom: 2.5px solid {color:text};
+}
+body.night .anouk_360, 
+body.night .dan_360, 
+body.night .luyi_360, 
+body.night .orna_360, 
+body.night .xinyu_360 {
+    border-bottom: 2.5px solid {color:background};
 }
 .anouk_360 img, 
 .dan_360 img, 
@@ -387,7 +456,7 @@ p {
 
 /* slide content - anouk */
 .anouk_wrap, .anouk_wrap_2 {
-    margin: 100px 0;
+    margin-top: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -398,7 +467,7 @@ p {
     margin-top: 650px;
 }
 #anouk_1, #anouk_2, #anouk_3, #anouk_4 {
-    width: 47.5%;
+    width: 49%;
 }
 #anouk_1 img {
     width: 100%;
@@ -407,15 +476,18 @@ p {
     border: 2.5px solid {color:text};
     object-fit: cover;
 }
+body.night #anouk_1 img {
+    border: 2.5px solid {color:background};
+}
 #anouk_2 h2:not(:first-child), #anouk_3 h2:not(:first-child) {
     margin-top: 50px;
 }
 #anouk_4 {
+    margin-bottom: 50px;
     display: grid;
-    grid-template-columns: 47.5% 47.5%;
-    grid-template-rows: 75% 75%;
-    gap: 2.5% 1.5%;
-    margin-bottom: 150px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    gap: 5px 5px;
 }
 #anouk_4 img {
     width: 100%;
@@ -424,10 +496,15 @@ p {
     border: 2.5px solid {color:text};
     object-fit: cover;
 }
+body.night #anouk_4 img {
+    border: 2.5px solid {color:background};
+}
 
 /* slide content - dan */
+.dan_wrap, .dan_wrap_2 {
+    margin-top: 100px;
+}
 .dan_wrap {
-    margin: 100px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -438,7 +515,7 @@ p {
     margin-top: 650px;
 }
 #dan_1, #dan_2 {
-    width: 47.5%;
+    width: 49%;
 }
 #dan_1 h2:not(:first-child) {
     margin-top: 50px;
@@ -450,11 +527,15 @@ p {
     border: 2.5px solid {color:text};
     object-fit: cover;
 }
+body.night #dan_2 img {
+    border: 2.5px solid {color:background};
+}
 #dan_3 {
+    margin: 50px 0;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 75%;
-    column-gap: 1%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px;
+    column-gap: 5px;
     margin-top: -25px;
 }
 #dan_3 img {
@@ -464,32 +545,168 @@ p {
     border: 2.5px solid {color:text};
     object-fit: cover;
 }
+body.night #dan_3 img {
+    border: 2.5px solid {color:background};
+}
 #dan_4 {
+    margin: 100px 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: flex-start;
 }
 #dan_4_sub, #dan_4_sub_1 {
-    width: 47.5%;
+    width: 49%;
 }
 
 /* slide content - luyi */
 .luyi .sticker img {
-    margin-left: -5%;
-    margin-top: 625px;
+    right: 5%;
+    margin-top: 775px;
+}
+.luyi_wrap, .luyi_wrap_3 {
+    margin-top: 100px;
+}
+#luyi_1 h2:not(:first-child), #luyi_3 h2:not(:first-child) {
+    margin-top: 50px;
+}
+#luyi_2 {
+    margin: 100px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px;
+    column-gap: 5px;
+}
+#luyi_2 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: 2.5px solid {color:text};
+    object-fit: cover;
+}
+body.night #luyi_2 img {
+    border: 2.5px solid {color:background};
+}
+.luyi_wrap_3 {
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+.luyi_wrap_3 img {
+    width: 49%;
+    height: 500px;
+    border-radius: 0;
+    border: 2.5px solid {color:text};
+    object-fit: cover;
+}
+body.night .luyi_wrap_3 img {
+    border: 2.5px solid {color:background};
+}
+#luyi_3 {
+    width: 49%;
 }
 
 /* slide content - orna */
+.orna_wrap, .orna_wrap_2 {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+}
 .orna .sticker img {
     margin-left: -5%;
-    margin-top: 625px;
+    margin-top: 720px;
+}
+#orna_1, #orna_2, #orna_3, #orna_4 {
+    width: 49%;
+}
+#orna_2 h2:not(:first-child), #orna_3 h2:not(:first-child) {
+    margin-top: 50px;
+}
+#orna_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    gap: 5px 5px;
+}
+#orna_1 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: 2.5px solid {color:text};
+    object-fit: cover;
+}
+body.night #orna_1 img {
+    border: 2.5px solid {color:background};
+}
+#orna_4 {
+    margin-bottom: 50px;
+}
+#orna_4 img {
+    width: 100%;
+    height: 500px;
+    border-radius: 0;
+    border: 2.5px solid {color:text};
+    object-fit: cover;
+}
+body.night #orna_4 img {
+    border: 2.5px solid {color:background};
 }
 
 /* slide content - xinyu */
+.xinyu_wrap, .xinyu_wrap_2 {
+    margin-top: 100px;
+}
 .xinyu .sticker img {
     margin-left: -5%;
-    margin-top: 625px;
+    margin-top: 850px;
+}
+#xinyu_2 {
+    margin-top: 100px;
+}
+#xinyu_2, #xinyu_3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+#xinyu_2 img {
+    width: 49%;
+    height: 500px;
+    border-radius: 0;
+    border: 2.5px solid {color:text};
+    object-fit: cover;
+}
+body.night #xinyu_2 img {
+    border: 2.5px solid {color:background};
+}
+#xinyu_2_sub, #xinyu_3_sub, #xinyu_3_sub_1 {
+    width: 49%;
+}
+#xinyu_3 {
+    height: auto;
+    margin-bottom: 100px;
+}
+#xinyu_4 {
+    margin: 50px 0 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px;
+    column-gap: 5px;
+    margin-top: -25px;
+}
+#xinyu_4 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    border: 2.5px solid {color:text};
+    object-fit: cover;
+}
+body.night #xinyu_4 img {
+    border: 2.5px solid {color:background};
 }
 
 
@@ -499,25 +716,28 @@ p {
     left: 0;
     width: 100%;
     height: auto;
-    margin-top: 100px;
     border-top: 2.5px solid {color:text};
     z-index: 60;
 }
+body.night .footwrap {
+    border-top: 2.5px solid {color:background};
+}
 .foot svg, .foot a svg {
-    width: 20px;
-    stroke: {color:text};
-    transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 .foot svg:hover, .foot a svg:hover {
     stroke: {color:text}75;
-    transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
     cursor: url(https://i.imgur.com/YmCrZ2z.png),progress!important;
+}
+body.night .foot svg:hover, body.night .foot a svg:hover {
+    stroke: {color:background}75;
 }
 .foot b {
     font-size: 0.75em;
@@ -581,10 +801,16 @@ a:hover { cursor: url(https://i.imgur.com/YmCrZ2z.png),progress!important; }
     width: 5px;
     height: 0px;
     background-color: {color:text}25;
-}   
+} 
+body.night::-webkit-scrollbar {
+    background-color: {color:background}25;
+}
 ::-webkit-scrollbar-thumb {
     border-radius: 0;
     background-color: {color:text};
+}
+body.night::-webkit-scrollbar-thumb {
+    background-color: {color:background};
 }
 [class^="slide_"]::-webkit-scrollbar {
     display: none;
@@ -600,13 +826,18 @@ a:hover { cursor: url(https://i.imgur.com/YmCrZ2z.png),progress!important; }
     color: {color:background};
     background-color: {color:text};
 }
+body.night .tippy-tooltip.custom-theme {
+    color: {color:text};
+    background-color: {color:background};
+}
 .tippy-tooltip.custom-theme .tippy-svg-arrow { fill: {color:text}; }
+body.night .tippy-tooltip.custom-theme .tippy-svg-arrow { fill: {color:background}; }
 
 /* tumblr controls */
 iframe.tmblr-iframe {
     z-index: 10000!important;
     top: 0!important;
-    right: 0!important;
+    left: 0!important;
     opacity: 0.5;
 }
 .tmblr-iframe--app-cta-button { display: none!important; }
@@ -629,8 +860,11 @@ iframe.tmblr-iframe {
     <input hidden type="radio" name="slideshow" id="button_e"/> 
     <input hidden type="radio" name="slideshow" id="button_f"/> 
     <div id="navigation">
+        <div class="daynight">
+            <div class="toggle" title="change color mode"></div>
+        </div>
         <div class="click">
-            <div class="clickmenu"></div>
+            <div class="menu"></div>
         </svg>
         </div>
         <div class="naviwrap">
@@ -680,11 +914,11 @@ iframe.tmblr-iframe {
                         <!-- PUT HTML 360 TABLE FILE HERE -->
                     </div>
                     <div class="sticker">
-                        <img data-tilt data-tilt-max="20" data-tilt-speed="400" data-tilt-perspective="500" src="{image:anouk}" />
+                        <img data-tilt data-tilt-max="20" data-tilt-transform="true" data-tilt-speed="500" data-tilt-perspective="400" src="{image:anouk}" />
                     </div>
                     <div class="anouk_wrap">
                         <div id="anouk_1">
-                            <a class="lightbox" href="{image:anouk main}"><img class="lightbox" src="{image:anouk main}" alt="Huichol beaded bracelet" /></a>
+                            <a class="lightbox" href="#!"><img src="{image:anouk main}" alt="Huichol beaded bracelet" /></a>
                         </div>
                         <div id="anouk_2">
                             <h2>description</h2>
@@ -701,10 +935,10 @@ iframe.tmblr-iframe {
                             <p>Beadwork art in Mexico is usually called Huichol beadwork as it was created and popularized by the Huichol, a group of several indigenous peoples. Huichol art also includes yarn painting; they use a vibrant rainbow of colors and depict either traditional symbols or non-traditional. My object specifically depicts a woman’s face in skull makeup, or a calavera. Sugar skulls & skulls in general hold a lot of importance in Mexican culture - ancient tradition included offering skulls to the god of the underworld, Mictlantecuhtli. Spanish colonization erased most of these traditions but they were kept alive by maintaining the symbol of a skull in a sweet candy (sugar skulls) - an entire holiday revolves around skulls & paying respects to the dead (Dia de Muertos).</p>
                         </div>
                         <div id="anouk_4">
-                            <img src="{image:anouk sub 1}" alt="Huichol beaded bracelet" data-featherlight="image" />
-                            <img src="{image:anouk sub 2}" alt="Huichol beaded bracelet" data-featherlight="image" />
-                            <img src="{image:anouk sub 3}" alt="Huichol beaded bracelet" data-featherlight="image" />
-                            <img src="{image:anouk sub 4}" alt="Huichol beaded bracelet" data-featherlight="image" />
+                            <img src="{image:anouk sub 1}" alt="Huichol beaded bracelet" />
+                            <img src="{image:anouk sub 2}" alt="Huichol beaded bracelet" />
+                            <img src="{image:anouk sub 3}" alt="Huichol beaded bracelet" />
+                            <img src="{image:anouk sub 4}" alt="Huichol beaded bracelet" />
                         </div>
                     </div>
                 </div>
@@ -732,7 +966,7 @@ iframe.tmblr-iframe {
                         <!-- PUT HTML 360 TABLE FILE HERE -->
                     </div>
                     <div class="sticker">
-                        <img data-tilt data-tilt-max="20" data-tilt-speed="400" data-tilt-perspective="500" src="{image:dan}" />
+                        <img data-tilt data-tilt-max="20" data-tilt-transform="true" data-tilt-speed="500" data-tilt-perspective="400" src="{image:dan}" />
                     </div>
                     <div class="dan_wrap">
                         <div id="dan_1">
@@ -747,10 +981,10 @@ iframe.tmblr-iframe {
                     </div>
                     <div class="dan_wrap_2">
                         <div id="dan_3">
-                            <img src="{image:dan sub 1}" alt="Egorov tarot cards" data-featherlight="image" />
-                            <img src="{image:dan sub 2}" alt="Egorov tarot cards" data-featherlight="image" />
-                            <img src="{image:dan sub 3}" alt="Egorov tarot cards" data-featherlight="image" />
-                            <img src="{image:dan sub 4}" alt="Egorov tarot cards" data-featherlight="image" />
+                            <img src="{image:dan sub 1}" alt="Egorov tarot cards" />
+                            <img src="{image:dan sub 2}" alt="Egorov tarot cards" />
+                            <img src="{image:dan sub 3}" alt="Egorov tarot cards" />
+                            <img src="{image:dan sub 4}" alt="Egorov tarot cards" />
                         </div>
                         <div id="dan_4">
                             <div id="dan_4_sub">
@@ -789,7 +1023,32 @@ iframe.tmblr-iframe {
                         <!-- PUT HTML 360 TABLE FILE HERE -->
                     </div>
                     <div class="sticker">
-                        <img data-tilt data-tilt-max="20" data-tilt-speed="400" data-tilt-perspective="500" src="{image:luyi}" />
+                        <img data-tilt data-tilt-max="20" data-tilt-transform="true" data-tilt-speed="500" data-tilt-perspective="400" src="{image:luyi}" />
+                    </div>
+                    <div class="luyi_wrap">
+                        <div id="luyi_1">
+                            <h2>description</h2>
+                            <p>Text</p>
+                        </div>
+                        <div id="luyi_2">
+                            <img src="{image:luyi sub 1}" alt="Chinese Zodiac bracelet" />
+                            <img src="{image:luyi sub 2}" alt="Chinese Zodiac bracelet" />
+                            <img src="{image:luyi sub 3}" alt="Chinese Zodiac bracelet" />
+                            <img src="{image:luyi sub 4}" alt="Chinese Zodiac bracelet" />
+                        </div>
+                    </div>
+                    <div class="luyi_wrap_2">
+                        <h2>Personal Meaning</h2>
+                        <p>One of the words in my name is ‘璐’, which represents the meaning of the beautiful jade. I was born in 2004,  so according to the Chinese zodiac, I belong to the sheep, so this jade is carved in the shape of a ram. Ram also was associated with peace, so it’s also one of the reasons my dad chose this for me.</p>
+                    </div>
+                    <div class="luyi_wrap_3">
+                        <img src="{image:luyi main}" alt="Chinese Zodiac bracelet" />
+                        <div id="luyi_3">
+                            <h2>Material analysis</h2>
+                            <p>Text</p>
+                            <h2>Contextual analysis</h2>
+                            <p>Text</p>
+                        </div>
                     </div>
                 </div>
                 <div class="footwrap">
@@ -816,7 +1075,32 @@ iframe.tmblr-iframe {
                         <!-- PUT HTML 360 TABLE FILE HERE -->
                     </div>
                     <div class="sticker">
-                        <img data-tilt data-tilt-max="20" data-tilt-speed="400" data-tilt-perspective="500" src="{image:orna}" />
+                        <img data-tilt data-tilt-max="20" data-tilt-transform="true" data-tilt-speed="500" data-tilt-perspective="400" src="{image:orna}" />
+                    </div>
+                    <div class="orna_wrap">
+                        <div id="orna_1">
+                            <img src="{image:orna sub 1}" alt="Silver hug ring" />
+                            <img src="{image:orna sub 2}" alt="Silver hug ring" />
+                            <img src="{image:orna sub 3}" alt="Silver hug ring" />
+                            <img src="{image:orna sub 4}" alt="Silver hug ring" />
+                        </div>
+                        <div id="orna_2">
+                            <h2>Description</h2>
+                            <p>Silver ring with adjustable arms forming a ‘hug.'</p>
+                            <h2>Personal meaning</h2>
+                            <p>This is a ring I gifted to myself. It was in a time of loneliness when I first moved away from home. I found the ring warming as it reminded me of a ‘hug.’ The ring symbolises strength from within.</p>
+                        </div>
+                    </div>
+                    <div class="orna_wrap_2">
+                        <div id="orna_3">
+                            <h2>Material analysis</h2>
+                            <p>Text</p>
+                            <h2>Contextual analysis</h2>
+                            <p>Text</p>
+                        </div>
+                        <div id="orna_4">
+                            <img src="{image:orna main}" alt="Silver Hug Ring" /> 
+                        </div>
                     </div>
                 </div>
                 <div class="footwrap">
@@ -843,7 +1127,38 @@ iframe.tmblr-iframe {
                         <!-- PUT HTML 360 TABLE FILE HERE -->
                     </div>
                     <div class="sticker">
-                        <img data-tilt data-tilt-max="20" data-tilt-speed="400" data-tilt-perspective="500" src="{image:xinyu}" />
+                        <img data-tilt data-tilt-max="20" data-tilt-transform="true" data-tilt-speed="500" data-tilt-perspective="400" src="{image:xinyu}" />
+                    </div>
+                    <div class="xinyu_wrap">
+                        <div id="xinyu_1">
+                            <h2>description</h2>
+                            <p>Text</p>
+                        </div>
+                        <div id="xinyu_2">
+                            <img src="{image:xinyu main}" alt="Namo Amitabha amulet" /> 
+                            <div id="xinyu_2_sub">
+                                <h2>Personal meaning</h2>
+                                <p>Text</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xinyu_wrap_2">
+                        <div id="xinyu_3">
+                            <div id="xinyu_3_sub">
+                                <h2>Material analysis</h2>
+                                <p>Text</p>
+                            </div>
+                            <div id="xinyu_3_sub_1">
+                                <h2>Contextual analysis</h2>
+                                <p>Text</p>
+                            </div>
+                        </div>
+                        <div id="xinyu_4">
+                            <img src="{image:xinyu sub 1}" alt="Namo Amitabha amulet" />
+                            <img src="{image:xinyu sub 2}" alt="Namo Amitabha amulet" />
+                            <img src="{image:xinyu sub 3}" alt="Namo Amitabha amulet" />
+                            <img src="{image:xinyu sub 4}" alt="Namo Amitabha amulet" />
+                        </div>
                     </div>
                 </div>
                 <div class="footwrap">
@@ -855,7 +1170,7 @@ iframe.tmblr-iframe {
                             <b>made with <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> by five guys</b>
                         </div>
                         <div id="github">
-                            <a href="https://raw.githubusercontent.com/engelthm/introgmd5/main/code/five%20guys" title="View the code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                            <a href="https://raw.githubusercontent.com/engelthm/introgmd5/main/code/five%20guys" title="View the code" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
                         </div>
                     </div>
                 </div>
@@ -875,8 +1190,16 @@ iframe.tmblr-iframe {
 <!-- lightbox --> <script src="magnific-popup/jquery.magnific-popup.js"></script>
 
 <script> 
+// toggle light/dark mode
+$(document).ready(function(){
+    $('.daynight').click(function(){
+        $('body').toggleClass('night'); 
+        $('.daynight span').toggleClass('toggle');
+    });
+});
+
 // lottie/bodymovin icon animation
-let iconMenu = document.querySelector('.clickmenu');
+let iconMenu = document.querySelector('.menu');
 let animationMenu = bodymovin.loadAnimation({
     container: iconMenu,
     renderer: 'svg',
@@ -890,12 +1213,27 @@ let animationMenu = bodymovin.loadAnimation({
         animationMenu.play();
         directionMenu = -directionMenu;
 });
+let iconToggle = document.querySelector('.toggle');
+let animationToggle = bodymovin.loadAnimation({
+    container: iconToggle,
+    renderer: 'svg',
+    loop: false,
+    autoplay: false,
+    path: "https://raw.githubusercontent.com/engelthm/introgmd5/main/assets/toggle.json"
+    });
+    var directionToggle = 1;
+        iconToggle.addEventListener('click', (e) => {
+        animationToggle.setDirection(directionToggle);
+        animationToggle.play();
+        directionToggle = -directionToggle;
+});
 
 // tippy.js
 tippy('[title]', {
     theme: 'custom',
     arrow: tippy.roundArrow,
     followCursor: true,
+    inertia: true,
     zIndex: 9999999999,
     maxWidth: 300,
     content(reference) {
@@ -918,12 +1256,6 @@ for (i = 0; i < navi.length; i++) {
         } 
     });
 }
-
-// tilt.js
-$('.sticker').tilt({
-    glare: true,
-    maxGlare: 1.0
-})
 
 // lightbox
 $(document).ready(function() {
