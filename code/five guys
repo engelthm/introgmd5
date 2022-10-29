@@ -36,30 +36,35 @@
 <meta name="image:anouk sub 2" content="" />
 <meta name="image:anouk sub 3" content="" />
 <meta name="image:anouk sub 4" content="" />
+<meta name="image:anouk sub 5" content="" />
 
 <meta name="image:dan main" content="" />
 <meta name="image:dan sub 1" content="" />
 <meta name="image:dan sub 2" content="" />
 <meta name="image:dan sub 3" content="" />
 <meta name="image:dan sub 4" content="" />
+<meta name="image:dan sub 5" content="" />
 
 <meta name="image:luyi main" content="" />
 <meta name="image:luyi sub 1" content="" />
 <meta name="image:luyi sub 2" content="" />
 <meta name="image:luyi sub 3" content="" />
 <meta name="image:luyi sub 4" content="" />
+<meta name="image:luyi sub 5" content="" />
 
 <meta name="image:orna main" content="" />
 <meta name="image:orna sub 1" content="" />
 <meta name="image:orna sub 2" content="" />
 <meta name="image:orna sub 3" content="" />
 <meta name="image:orna sub 4" content="" />
+<meta name="image:orna sub 5" content="" />
 
 <meta name="image:xinyu main" content="" />
 <meta name="image:xinyu sub 1" content="" />
 <meta name="image:xinyu sub 2" content="" />
 <meta name="image:xinyu sub 3" content="" />
 <meta name="image:xinyu sub 4" content="" />
+<meta name="image:xinyu sub 5" content="" />
 
 <meta name="color:text" content="#1e1e1e" />
 <meta name="color:background" content="#f8f8ef" />
@@ -100,10 +105,18 @@ body {
     background-color: {color:background};
     color: {color:text};
     scroll-behavior: smooth;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 body.night {
     background-color: {color:text};
     color: {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 a {
     color: {color:blue};
@@ -140,9 +153,17 @@ svg {
     width: 20px;
     height: auto;
     stroke: {color:text};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 body.night svg {
     stroke: {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 
 
@@ -175,9 +196,17 @@ body.night svg {
 }
 .daynight .toggle path {
     stroke: {color:text};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 body.night .daynight .toggle path {
     stroke: {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 
 /* navigation */
@@ -196,11 +225,19 @@ body.night .daynight .toggle path {
     justify-content: space-between;
     align-items: center;
     background-color: {color:background};
-    border-bottom: 2.5px solid {color:text};
+    border-bottom: 1.5px solid {color:text};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 body.night .click {
     background-color: {color:text};
-    border-bottom: 2.5px solid {color:background};
+    border-bottom: 1.5px solid {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 .click .menu {
     margin: 15px 0;
@@ -213,21 +250,35 @@ body.night .click {
 }
 .click .menu path {
     stroke: {color:text};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 body.night .click .menu path {
     stroke: {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 .click:hover .menu {
     cursor: url(https://i.imgur.com/YmCrZ2z.png),progress!important;
 }
 #hover {
     display: none;
+    animation: fadeOut 0.75s;
+    -webkit-animation: fadeOut 0.75s;
 }
 [class^="label_"]:hover #hover {
     display: block;
+    animation: fadeIn 0.75s;
+    -webkit-animation: fadeIn 0.75s;
 }
 [class^="label_"]:hover #normal {
     display: none;
+    animation: fadeOut 0.75s;
+    -webkit-animation: fadeOut 0.75s;
 }
 [class^="label_"] {
     display: block;
@@ -235,17 +286,47 @@ body.night .click .menu path {
     font-size: 0.75em;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    border-bottom: 2.5px solid {color:text};
+    border-bottom: 1.5px solid {color:text};
     background-color: {color:background};
+    animation: fadeIn 0.75s;
+    -webkit-animation: fadeIn 0.75s;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+@-webkit-keyframes fadeIn {
+    from { opacity: 0.0; }
+    to { opacity: 1.0; }
+}
+@keyframes fadeIn {
+    from { opacity: 0.0; }
+    to { opacity: 1.0; }
+}
+@-webkit-keyframes fadeOut {
+    to { opacity: 0.0; }
+    from { opacity: 1.0; }
+}
+@keyframes fadeOut {
+    to { opacity: 0.0; }
+    from { opacity: 1.0; }
 }
 body.night [class^="label_"] {
-    border-bottom: 2.5px solid {color:background};
+    border-bottom: 1.5px solid {color:background};
     background-color: {color:text};
 }
 [class^="label_"]:hover {
     color: {color:background};
     background-color: {color:text};
     cursor: url(https://i.imgur.com/YmCrZ2z.png),progress!important;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+body.night [class^="label_"]:hover {
+    color: {color:text};
+    background-color: {color:background};
 }
 .naviwrap {
     max-height: 0;
@@ -282,6 +363,8 @@ body.night #button_f:checked ~ #navigation .label_f {
 #button_e:checked ~ #navigation .label_e #hover, 
 #button_f:checked ~ #navigation .label_f #hover {
     display: block;
+    animation: fadeIn 0.75s;
+    -webkit-animation: fadeIn 0.75s;
 }
 #button_a:checked ~ #navigation .label_a #normal,
 #button_b:checked ~ #navigation .label_b #normal,
@@ -290,6 +373,8 @@ body.night #button_f:checked ~ #navigation .label_f {
 #button_e:checked ~ #navigation .label_e #normal, 
 #button_f:checked ~ #navigation .label_f #normal {
     display: none;
+    animation: fadeOut 0.75s;
+    -webkit-animation: fadeOut 0.75s;
 }
 
 /* slides */
@@ -367,14 +452,22 @@ body.night #button_f:checked ~ #navigation .label_f {
     left: 0;
     margin: 0 0 50px
     background-size: cover;
-    border-bottom: 2.5px solid {color:text};
+    border-bottom: 1.5px solid {color:text};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 body.night .anouk_360, 
 body.night .dan_360, 
 body.night .luyi_360, 
 body.night .orna_360, 
 body.night .xinyu_360 {
-    border-bottom: 2.5px solid {color:background};
+    border-bottom: 1.5px solid {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 .anouk_360 img, 
 .dan_360 img, 
@@ -433,19 +526,21 @@ body.night .xinyu_360 {
     margin: 10px 0;
 }
 
-/* slide content - index */
+/* slide content - index text */
 .index {
     position: fixed;
     width: 100%;
     height: auto;
     text-align: center;
     left: 50%;
-    top: 50%;
+    top: 53%;
     transform: translate(-50%, -50%);
+    z-index: 50;
 }
 .index h1 {  
-    font-size: 12.5em;
-    line-height: 75%;
+    font-size: 15em;
+    line-height: 70%;
+    margin-bottom: 75px;
 }
 .index b {
     font-size: 0.75em;
@@ -453,9 +548,90 @@ body.night .xinyu_360 {
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
+.index [class^="label_"], .index [class^="label_"]:hover {
+    border: none;
+    background-color: transparent;
+}
+body.night .index [class^="label_"], body.night .index [class^="label_"]:hover {
+    border: none;
+    background-color: transparent;
+}
+.index i {
+    width: 100%;
+    height: auto;
+    padding: 15px 50px 15px 25px;
+    border: 1.5px solid {color:text};
+    border-radius: 2.5px;
+    font-style: normal;
+    text-align: center;
+    background-color: {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+body.night .index i {
+    border: 1.5px solid {color:background};
+    background-color: {color:text};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+.index i:hover {
+    color: {color:background};
+    background-color: {color:text};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+body.night .index i:hover {
+    color: {color:text};
+    background-color: {color:background};
+}
+.index .down {
+    position: fixed;
+    bottom: 3px;
+    left: 51.5%;
+    width: 25px;
+    height: auto;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+.index .down path {
+    stroke: {color:text};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+body.night .index .down path {
+    stroke: {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+.index i:hover .down path {
+    stroke: {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+body.night .index i:hover .down path {
+    stroke: {color:text};
+}
 
 /* slide content - anouk */
-.anouk_wrap, .anouk_wrap_2 {
+.anouk_wrap, .anouk_wrap_2, .anouk_wrap_3 {
     margin-top: 100px;
     display: flex;
     flex-direction: row;
@@ -466,24 +642,31 @@ body.night .xinyu_360 {
     margin-left: -5%;
     margin-top: 650px;
 }
-#anouk_1, #anouk_2, #anouk_3, #anouk_4 {
+#anouk_1, #anouk_2, #anouk_3, #anouk_4, #anouk_5, #anouk_6 {
     width: 49%;
 }
 #anouk_1 img {
     width: 100%;
-    height: 500px;
-    border-radius: 0;
-    border: 2.5px solid {color:text};
+    height: 600px;
+    border-radius: 2.5px;
+    border: 1.5px solid {color:text};
     object-fit: cover;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 body.night #anouk_1 img {
-    border: 2.5px solid {color:background};
+    border: 1.5px solid {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 #anouk_2 h2:not(:first-child), #anouk_3 h2:not(:first-child) {
     margin-top: 50px;
 }
 #anouk_4 {
-    margin-bottom: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 300px 300px;
@@ -492,12 +675,41 @@ body.night #anouk_1 img {
 #anouk_4 img {
     width: 100%;
     height: 100%;
-    border-radius: 0;
-    border: 2.5px solid {color:text};
+    border-radius: 2.5px;
+    border: 1.5px solid {color:text};
     object-fit: cover;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 body.night #anouk_4 img {
-    border: 2.5px solid {color:background};
+    border: 1.5px solid {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+.anouk_wrap_4 {
+    margin: 100px 0;
+}
+.anouk_wrap_4 img {
+    width: 100%;
+    height: 250px;
+    border-radius: 2.5px;
+    border: 1.5px solid {color:text};
+    object-fit: cover;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+body.night .anouk_wrap_4 img {
+    border: 1.5px solid {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 
 /* slide content - dan */
@@ -517,18 +729,26 @@ body.night #anouk_4 img {
 #dan_1, #dan_2 {
     width: 49%;
 }
-#dan_1 h2:not(:first-child) {
+#dan_1 h2:not(:first-child), #dan_6 h2 {
     margin-top: 50px;
 }
 #dan_2 img {
     width: 100%;
-    height: 500px;
-    border-radius: 0;
-    border: 2.5px solid {color:text};
+    height: 600px;
+    border-radius: 2.5px;
+    border: 1.5px solid {color:text};
     object-fit: cover;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 body.night #dan_2 img {
-    border: 2.5px solid {color:background};
+    border: 1.5px solid {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 #dan_3 {
     margin: 50px 0;
@@ -541,12 +761,20 @@ body.night #dan_2 img {
 #dan_3 img {
     width: 100%;
     height: 100%;
-    border-radius: 0;
-    border: 2.5px solid {color:text};
+    border-radius: 2.5px;
+    border: 1.5px solid {color:text};
     object-fit: cover;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 body.night #dan_3 img {
-    border: 2.5px solid {color:background};
+    border: 1.5px solid {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 #dan_4 {
     margin: 100px 0;
@@ -558,11 +786,32 @@ body.night #dan_3 img {
 #dan_4_sub, #dan_4_sub_1 {
     width: 49%;
 }
+.dan_wrap_3 img {
+    width: 100%;
+    height: 250px;
+    border-radius: 2.5px;
+    border: 1.5px solid {color:text};
+    object-fit: cover;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+body.night .dan_wrap_3 img {
+    border: 1.5px solid {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+.dan_wrap_4 {
+    margin: 100px 0;
+}
 
 /* slide content - luyi */
 .luyi .sticker img {
     right: 5%;
-    margin-top: 775px;
+    margin-top: 800px;
 }
 .luyi_wrap, .luyi_wrap_3 {
     margin-top: 100px;
@@ -580,14 +829,22 @@ body.night #dan_3 img {
 #luyi_2 img {
     width: 100%;
     height: 100%;
-    border-radius: 0;
-    border: 2.5px solid {color:text};
+    border-radius: 2.5px;
+    border: 1.5px solid {color:text};
     object-fit: cover;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 body.night #luyi_2 img {
-    border: 2.5px solid {color:background};
+    border: 1.5px solid {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
-.luyi_wrap_3 {
+.luyi_wrap_3, .luyi_wrap_4 {
     margin-bottom: 100px;
     display: flex;
     flex-direction: row;
@@ -596,16 +853,43 @@ body.night #luyi_2 img {
 }
 .luyi_wrap_3 img {
     width: 49%;
-    height: 500px;
-    border-radius: 0;
-    border: 2.5px solid {color:text};
+    height: 600px;
+    border-radius: 2.5px;
+    border: 1.5px solid {color:text};
     object-fit: cover;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 body.night .luyi_wrap_3 img {
-    border: 2.5px solid {color:background};
+    border: 1.5px solid {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
-#luyi_3 {
+#luyi_3, #luyi_4, #luyi_5 {
     width: 49%;
+}
+.luyi_wrap_5 img {
+    margin: 0 0 100px;
+    width: 100%;
+    height: 250px;
+    border-radius: 2.5px;
+    border: 1.5px solid {color:text};
+    object-fit: cover;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+body.night .luyi_wrap_5 img {
+    border: 1.5px solid {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 
 /* slide content - orna */
@@ -623,7 +907,7 @@ body.night .luyi_wrap_3 img {
 #orna_1, #orna_2, #orna_3, #orna_4 {
     width: 49%;
 }
-#orna_2 h2:not(:first-child), #orna_3 h2:not(:first-child) {
+#orna_2 h2:not(:first-child), #orna_3 h2:not(:first-child), #orna_6 h2 {
     margin-top: 50px;
 }
 #orna_1 {
@@ -635,25 +919,59 @@ body.night .luyi_wrap_3 img {
 #orna_1 img {
     width: 100%;
     height: 100%;
-    border-radius: 0;
-    border: 2.5px solid {color:text};
+    border-radius: 2.5px;
+    border: 1.5px solid {color:text};
     object-fit: cover;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 body.night #orna_1 img {
-    border: 2.5px solid {color:background};
+    border: 1.5px solid {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 #orna_4 {
     margin-bottom: 50px;
 }
 #orna_4 img {
     width: 100%;
-    height: 500px;
-    border-radius: 0;
-    border: 2.5px solid {color:text};
+    height: 600px;
+    border-radius: 2.5px;
+    border: 1.5px solid {color:text};
     object-fit: cover;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 body.night #orna_4 img {
-    border: 2.5px solid {color:background};
+    border: 1.5px solid {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+.orna_wrap_3 {
+    margin: 50px 0;
+}
+.orna_wrap_4 img {
+    margin: 50px 0 100px;
+    width: 100%;
+    height: 250px;
+    border-radius: 2.5px;
+    border: 1.5px solid {color:text};
+    object-fit: cover;
+}
+body.night .orna_wrap_4 img {
+    border: 1.5px solid {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 
 /* slide content - xinyu */
@@ -675,13 +993,21 @@ body.night #orna_4 img {
 }
 #xinyu_2 img {
     width: 49%;
-    height: 500px;
-    border-radius: 0;
-    border: 2.5px solid {color:text};
+    height: 600px;
+    border-radius: 2.5px;
+    border: 1.5px solid {color:text};
     object-fit: cover;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 body.night #xinyu_2 img {
-    border: 2.5px solid {color:background};
+    border: 1.5px solid {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 #xinyu_2_sub, #xinyu_3_sub, #xinyu_3_sub_1 {
     width: 49%;
@@ -701,12 +1027,78 @@ body.night #xinyu_2 img {
 #xinyu_4 img {
     width: 100%;
     height: 100%;
-    border-radius: 0;
-    border: 2.5px solid {color:text};
+    border-radius: 2.5px;
+    border: 1.5px solid {color:text};
     object-fit: cover;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 body.night #xinyu_4 img {
-    border: 2.5px solid {color:background};
+    border: 1.5px solid {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+.xinyu_wrap_3 {
+    margin: 50px 0;
+}
+.xinyu_wrap_4 img {
+    margin: 50px 0 100px;
+    width: 100%;
+    height: 250px;
+    border-radius: 2.5px;
+    border: 1.5px solid {color:text};
+    object-fit: cover;
+}
+body.night .xinyu_wrap_4 img {
+    border: 1.5px solid {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+
+
+/* PAGINATION */
+.pagi {
+    width: 100%;
+    text-align: center;
+}
+.pagi [class^="label_"] {
+    padding: 15px 20px;
+    border-top: 1.5px solid {color:text};
+    border-bottom: none;
+    color: {color:background};
+    background-color: {color:text};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+body.night .pagi [class^="label_"] {
+    border-top: 1.5px solid {color:background};
+    border-bottom: none;
+    color: {color:text};
+    background-color: {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+.pagi [class^="label_"]:hover {
+    color: {color:text};
+    background-color: {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+body.night .pagi [class^="label_"]:hover {
+    color: {color:background};
+    background-color: {color:text};
 }
 
 
@@ -716,11 +1108,19 @@ body.night #xinyu_4 img {
     left: 0;
     width: 100%;
     height: auto;
-    border-top: 2.5px solid {color:text};
+    border-top: 1.5px solid {color:text};
     z-index: 60;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 body.night .footwrap {
-    border-top: 2.5px solid {color:background};
+    border-top: 1.5px solid {color:background};
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 .foot svg, .foot a svg {
     transition-duration: 0.75s;
@@ -738,6 +1138,10 @@ body.night .footwrap {
 }
 body.night .foot svg:hover, body.night .foot a svg:hover {
     stroke: {color:background}75;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
 }
 .foot b {
     font-size: 0.75em;
@@ -772,22 +1176,6 @@ body.night .foot svg:hover, body.night .foot a svg:hover {
 }
 
 
-/* RESPONSIVE DESIGN */
-/* tablet size*/
-@media screen and (max-width: 1000px) {
-    .posts {
-        
-    }
-}
-
-/* phone size*/
-@media screen and (max-width: 500px) {
-    .posts {
-        
-    }
-}
-
-
 /* EXTRA CSS */
 /* cursor */
 * { cursor: url(https://i.imgur.com/d7VhVIg.png),auto }
@@ -806,7 +1194,7 @@ body.night::-webkit-scrollbar {
     background-color: {color:background}25;
 }
 ::-webkit-scrollbar-thumb {
-    border-radius: 0;
+    border-radius: 2.5px;
     background-color: {color:text};
 }
 body.night::-webkit-scrollbar-thumb {
@@ -834,13 +1222,7 @@ body.night .tippy-tooltip.custom-theme {
 body.night .tippy-tooltip.custom-theme .tippy-svg-arrow { fill: {color:background}; }
 
 /* tumblr controls */
-iframe.tmblr-iframe {
-    z-index: 10000!important;
-    top: 0!important;
-    left: 0!important;
-    opacity: 0.5;
-}
-.tmblr-iframe--app-cta-button { display: none!important; }
+iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
 
 
 /* END CSS STYLING*/
@@ -865,7 +1247,6 @@ iframe.tmblr-iframe {
         </div>
         <div class="click">
             <div class="menu"></div>
-        </svg>
         </div>
         <div class="naviwrap">
             <label for="button_a" class="label_a">
@@ -902,6 +1283,7 @@ iframe.tmblr-iframe {
                 <div class="index">
                     <b>gmd year 1 • cyan • small team 5</b>
                     <h1>five<br>guys</h1>
+                    <label for="button_b" class="label_b"><i>explore <div class="down"></div></i></label>
                 </div>
             </section>
             
@@ -941,6 +1323,22 @@ iframe.tmblr-iframe {
                             <img src="{image:anouk sub 4}" alt="Huichol beaded bracelet" />
                         </div>
                     </div>
+                    <div class="anouk_wrap_3">
+                        <div id="anouk_5">
+                            <h2>Museum description</h2>
+                            <p>A souvenir bracelet bought from a Mexican gift shop. Inspired by traditional Huichol beadwork, an art form developed by the north-western Indigenous peoples of Mexico. The bracelet above (c. 2021) depicts a woman wearing skull makeup, presumably for the Day of the Dead. Artist unknown.</p>
+                        </div>
+                        <div id="anouk_6">
+                            <h2>Ebay description</h2>
+                            <p>Mexican beaded bracelet in perfect condition, never worn. Previously used as well decoration but can be tied to a wrist / ankle. Beautiful depiction of a woman wearing skull makeup, bought in a Playa del Carmen gift shop. Please ask for more pictures, open to offers.</p>
+                        </div>
+                    </div>
+                    <div class="anouk_wrap_4">
+                        <img src="{image:anouk sub 5}" alt="Huichol beaded bracelet" />
+                    </div>
+                </div>
+                <div class="pagi">
+                    <label for="button_c" class="label_c">Next</label>
                 </div>
                 <div class="footwrap">
                     <div class="foot">
@@ -998,6 +1396,22 @@ iframe.tmblr-iframe {
                             </div>
                         </div>
                     </div>
+                    <div class="dan_wrap_3">
+                        <img src="{image:dan sub 5}" alt="Egorov tarot cards" />
+                    </div>
+                    <div class="dan_wrap_4">
+                        <div id="dan_5">
+                            <h2>Museum description</h2>
+                            <p>Originally printed in the 1970s, this 1997 edition of the Egorov Tarot cards are a result of a deeply fascination clash of cultures. Written in several different western European languagnes, though drawn in a style indicative of the Eastern Orthodox Church, this medium of divintation—while often associated with the occult and pagan practices—has been Christianized. An appeal to greater audiences, and if shown by nothing else than the borderline self-indulgent means by which Alexander Egorov wrote about himself and his practice, it is clear that Egorov hoped to reach more acclaim than he ever actually did.</p>
+                        </div>
+                        <div id="dan_6">
+                            <h2>Ebay description</h2>
+                            <p>Well-loved set of rare Egorov Tarot cards. Box is well worn but cards and guide are in mint condition, save for a single dogear wrinkle on the guide’s front page. This deck is Christianized and written in English, French and German. Do note that guide is only in English. May be of a special interest to card/tarot collectors.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagi">
+                    <label for="button_d" class="label_d">Next</label>
                 </div>
                 <div class="footwrap">
                     <div class="foot">
@@ -1028,7 +1442,7 @@ iframe.tmblr-iframe {
                     <div class="luyi_wrap">
                         <div id="luyi_1">
                             <h2>description</h2>
-                            <p>Text</p>
+                            <p>A Chinese zodiac necklace that was a birthday present from my dad.</p>
                         </div>
                         <div id="luyi_2">
                             <img src="{image:luyi sub 1}" alt="Chinese Zodiac bracelet" />
@@ -1045,11 +1459,27 @@ iframe.tmblr-iframe {
                         <img src="{image:luyi main}" alt="Chinese Zodiac bracelet" />
                         <div id="luyi_3">
                             <h2>Material analysis</h2>
-                            <p>Text</p>
+                            <p>Jade is a mineral used as jewellery or for ornament often carved in delicate textures. It is typically green or white, sometimes turquoise. When the light shines directly on the jade, textures in it can be found.</p>
                             <h2>Contextual analysis</h2>
-                            <p>Text</p>
+                            <p>Usually represent people’s status during ancient chinese, nowadays people usually wear it as accessories.</p>
                         </div>
                     </div>
+                    <div class="luyi_wrap_4">
+                        <div id="luyi_4">
+                            <h2>Museum description</h2>
+                            <p>Text.</p>
+                        </div>
+                        <div id="luyi_5">
+                            <h2>Ebay description</h2>
+                            <p>Text.</p>
+                        </div>
+                    </div>
+                    <div class="luyi_wrap_5">
+                        <img src="{image:luyi sub 5}" alt="Chinese Zodiac bracelet" />
+                    </div>
+                </div>
+                <div class="pagi">
+                    <label for="button_e" class="label_e">Next</label>
                 </div>
                 <div class="footwrap">
                     <div class="foot">
@@ -1094,14 +1524,31 @@ iframe.tmblr-iframe {
                     <div class="orna_wrap_2">
                         <div id="orna_3">
                             <h2>Material analysis</h2>
-                            <p>Text</p>
+                            <p>It is 92.5% silver, 7.5% other metals.</p>
                             <h2>Contextual analysis</h2>
-                            <p>Text</p>
+                            <p>I do not know the history of the ring, and I can also presume it has none (at least none of great interest). I purchased it in Camden Markets at the beginning of this year. Prior to this it was more than likely produced in bulk and shipped for sale. It is a result of consumerism. 
+</p>
                         </div>
                         <div id="orna_4">
                             <img src="{image:orna main}" alt="Silver Hug Ring" /> 
                         </div>
                     </div>
+                    <div class="orna_wrap_3">
+                        <div id="orna_5">
+                            <h2>Museum description</h2>
+                            <p>Text.</p>
+                        </div>
+                        <div id="orna_6">
+                            <h2>Ebay description</h2>
+                            <p>Text.</p>
+                        </div>
+                    </div>
+                    <div class="orna_wrap_4">
+                        <img src="{image:orna sub 5}" alt="Silver Hug Ring" />
+                    </div>
+                </div>
+                <div class="pagi">
+                    <label for="button_f" class="label_f">Next</label>
                 </div>
                 <div class="footwrap">
                     <div class="foot">
@@ -1132,13 +1579,13 @@ iframe.tmblr-iframe {
                     <div class="xinyu_wrap">
                         <div id="xinyu_1">
                             <h2>description</h2>
-                            <p>Text</p>
+                            <p>Namo Amitabha Amulet which means someone is protecting me.It is an equivalent of a Buddhist token.</p>
                         </div>
                         <div id="xinyu_2">
                             <img src="{image:xinyu main}" alt="Namo Amitabha amulet" /> 
                             <div id="xinyu_2_sub">
                                 <h2>Personal meaning</h2>
-                                <p>Text</p>
+                                <p>It was given to me by my mother as a way of showing my family how much they care about me. This is a Chinese religion. Parents/relatives/friends kneel before the Buddha’s image in reverence. This is a way I can receive blessings from the status of Buddha.</p>
                             </div>
                         </div>
                     </div>
@@ -1146,11 +1593,11 @@ iframe.tmblr-iframe {
                         <div id="xinyu_3">
                             <div id="xinyu_3_sub">
                                 <h2>Material analysis</h2>
-                                <p>Text</p>
+                                <p>Perhaps fake gold, given that the ancients believe that gold and silver jewellery has a role in warding off evil spirits. So this aspect has continued to this day.</p>
                             </div>
                             <div id="xinyu_3_sub_1">
                                 <h2>Contextual analysis</h2>
-                                <p>Text</p>
+                                <p>The necklace comes from Wenzhou temple, which is my hometown. Temples are a form of Buddhist architecture. A temple is a place of Buddhist veneration, which is not to be invaded.</p>
                             </div>
                         </div>
                         <div id="xinyu_4">
@@ -1159,6 +1606,19 @@ iframe.tmblr-iframe {
                             <img src="{image:xinyu sub 3}" alt="Namo Amitabha amulet" />
                             <img src="{image:xinyu sub 4}" alt="Namo Amitabha amulet" />
                         </div>
+                    </div>
+                    <div class="xinyu_wrap_3">
+                        <div id="xinyu_5">
+                            <h2>Museum description</h2>
+                            <p>Text.</p>
+                        </div>
+                        <div id="xinyu_6">
+                            <h2>Ebay description</h2>
+                            <p>Text.</p>
+                        </div>
+                    </div>
+                    <div class="xinyu_wrap_4">
+                        <img src="{image:xinyu sub 5}" alt="Namo Amitabha amulet" />
                     </div>
                 </div>
                 <div class="footwrap">
@@ -1199,6 +1659,13 @@ $(document).ready(function(){
 });
 
 // lottie/bodymovin icon animation
+let svgContainer = document.querySelector('.down');
+    let animItem = bodymovin.loadAnimation({
+        wrapper: svgContainer,
+        animType: 'svg',
+        loop: true,
+        path: "https://raw.githubusercontent.com/engelthm/introgmd5/main/assets/arrowDown.json"
+});
 let iconMenu = document.querySelector('.menu');
 let animationMenu = bodymovin.loadAnimation({
     container: iconMenu,
