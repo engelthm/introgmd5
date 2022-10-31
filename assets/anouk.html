@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+MODELooK Presentation
+-->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+	
+    <title>MODELooK Presentation</title>
+	
+	<script src="./modelook_files/jquery.min.js"></script>
+	<link rel="stylesheet" href="./modelook_files/jquery-ui.css">
+	<script src="./modelook_files/jquery-ui.min.js"></script>
+	<script src="./modelook_files/modelook.js"></script>
+</head>
+<body>
+
+<script>
+	$(function () {
+		$(".modelook").modelook({
+			drawMethod: "singleCanvas",
+			serialNumber: "dg21r-2an0-5t41x-2ne1-12071",
+			imagesUrlSchema: "images/<width>x<height>/<element>.jpg",
+			imagesXCount: 36,
+			imagesYCount: 1,
+			autoLoad: true,
+			autoSpin: true,
+			presentation: {
+				width: 900,
+				height: 600,
+				singleTurnTime: 10,
+				bounceX: true
+			},
+			interface: {
+				show: true,
+				zoomButton: true,
+				zoomScroll: true
+			},
+			zoom: { easing: true },
+			playInitialSpeed: 0.3,      
+			imagesSizes: [
+				[900, 600], [5760, 3840]
+			],
+			beforeUrlMaskElement: function (nr) {
+				var n = 4;
+				return Array(n - String(nr).length + 1).join('0') + nr;
+			}
+
+		});
+	});
+</script>
+<div class="modelook"></div>
+</body></html>
