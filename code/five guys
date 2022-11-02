@@ -73,6 +73,51 @@
 <meta name="color:green" content="#dfee62" />
 <meta name="color:gray" content="#a9b5bd" />
 
+<meta name="text:— ANOUK —"/>
+<meta name="text:anouk desc" content="" />
+<meta name="text:anouk meaning" content="" />
+<meta name="text:anouk material" content="" />
+<meta name="text:anouk context" content="" />
+<meta name="text:anouk desc" content="" />
+<meta name="text:anouk museum" content="" />
+<meta name="text:anouk ebay" content="" />
+
+<meta name="text:— DAN —"/>
+<meta name="text:dan desc" content="" />
+<meta name="text:dan meaning" content="" />
+<meta name="text:dan material" content="" />
+<meta name="text:dan context" content="" />
+<meta name="text:dan desc" content="" />
+<meta name="text:dan museum" content="" />
+<meta name="text:dan ebay" content="" />
+
+<meta name="text:— LUYI —"/>
+<meta name="text:luyi desc" content="" />
+<meta name="text:luyi meaning" content="" />
+<meta name="text:luyi material" content="" />
+<meta name="text:luyi context" content="" />
+<meta name="text:luyi desc" content="" />
+<meta name="text:luyi museum" content="" />
+<meta name="text:luyi ebay" content="" />
+
+<meta name="text:— ORNA —"/>
+<meta name="text:orna desc" content="" />
+<meta name="text:orna meaning" content="" />
+<meta name="text:orna material" content="" />
+<meta name="text:orna context" content="" />
+<meta name="text:orna desc" content="" />
+<meta name="text:orna museum" content="" />
+<meta name="text:orna ebay" content="" />
+
+<meta name="text:— XINYU —"/>
+<meta name="text:xinyu desc" content="" />
+<meta name="text:xinyu meaning" content="" />
+<meta name="text:xinyu material" content="" />
+<meta name="text:xinyu context" content="" />
+<meta name="text:xinyu desc" content="" />
+<meta name="text:xinyu museum" content="" />
+<meta name="text:xinyu ebay" content="" />
+
 
 <!-- IMPORT LINKS -->
 <!-- fonts --> <link rel="stylesheet" href="https://use.typekit.net/bzk4ibc.css">
@@ -209,6 +254,69 @@ body.night .daynight .toggle path {
     -webkit-transition-duration: 0.75s;
 }
 
+/* notification box */
+.notif {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: auto;
+    font-size: 0.75em;
+    line-height: 125%;
+    margin-top: 75px;
+    margin-left: 15px;
+    padding: 15px;
+    border-radius: 2.5px;
+    border: 1.5px solid {color:text};
+    background-color: {color:background};
+    box-shadow: 5px 5px 15px {color:text}25;
+    animation: fadeIn 0.75s;
+    -webkit-animation: fadeIn 0.75s;
+    z-index: 300;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+body.night .notif {
+    border: 1.5px solid {color:background};
+    background-color: {color:text};
+    box-shadow: 5px 5px 15px {color:background}25;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+.notif span svg {
+    position: absolute;
+    top: 15px;
+    left: 12px;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+}
+.notif span svg:hover {
+    stroke: {color:text}75;
+    transition-duration: 0.75s;
+    -o-transition-duration: 0.75s;
+    -moz-transition-duration: 0.75s;
+    -webkit-transition-duration: 0.75s;
+    cursor: url(https://i.imgur.com/YmCrZ2z.png),progress!important;
+}
+.notif p {
+    width: 80%;
+    margin-left: 20%;
+}
+.notif p b {
+    font-size: 1.1em;
+    font-family: antique-olive-nord, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.5px;
+    text-transform: lowercase;
+}
+
 /* navigation */
 #navigation {
     position: fixed;
@@ -282,7 +390,7 @@ body.night .click .menu path {
 }
 [class^="label_"] {
     display: block;
-    padding: 10px 15px;
+    padding: 15px;
     font-size: 0.75em;
     letter-spacing: 0.5px;
     text-transform: uppercase;
@@ -479,30 +587,6 @@ body.night .xinyu_360 {
     object-fit: cover;
 }
 
-/* slide content - lightboxes */
-.mfp-no-margins .mfp-container {
-	padding: 0;
-}
-.mfp-with-zoom .mfp-container,
-.mfp-with-zoom.mfp-bg {
-    opacity: 0;
-	-webkit-backface-visibility: hidden;
-	-webkit-transition: all 0.3s ease-out; 
-	-moz-transition: all 0.3s ease-out; 
-	-o-transition: all 0.3s ease-out; 
-	transition: all 0.3s ease-out;
-}
-.mfp-with-zoom.mfp-ready .mfp-container {
-    opacity: 1;
-}
-.mfp-with-zoom.mfp-ready.mfp-bg {
-    opacity: 0.8;
-}
-.mfp-with-zoom.mfp-removing .mfp-container, 
-.mfp-with-zoom.mfp-removing.mfp-bg {
-	opacity: 0;
-}
-
 /* slide content - general styling */
 .anouk, .dan, .luyi, .orna, .xinyu {
     width: 80%;
@@ -538,7 +622,7 @@ body.night .xinyu_360 {
     z-index: 50;
 }
 .index h1 {  
-    font-size: 15em;
+    font-size: 17em;
     line-height: 70%;
     margin-bottom: 75px;
 }
@@ -577,18 +661,11 @@ body.night .index [class^="label_"], body.night .index [class^="label_"]:hover {
 body.night .index i {
     border: 1.5px solid {color:background};
     background-color: {color:text};
-    transition-duration: 0.75s;
-    -o-transition-duration: 0.75s;
-    -moz-transition-duration: 0.75s;
-    -webkit-transition-duration: 0.75s;
 }
 .index i:hover {
     color: {color:background};
     background-color: {color:text};
-    transition-duration: 0.75s;
-    -o-transition-duration: 0.75s;
-    -moz-transition-duration: 0.75s;
-    -webkit-transition-duration: 0.75s;
+    cursor: url(https://i.imgur.com/YmCrZ2z.png),progress!important;
 }
 body.night .index i:hover {
     color: {color:text};
@@ -596,7 +673,7 @@ body.night .index i:hover {
 }
 .index .down {
     position: fixed;
-    bottom: 3px;
+    bottom: 8px;
     left: 51.5%;
     width: 25px;
     height: auto;
@@ -628,6 +705,34 @@ body.night .index .down path {
 }
 body.night .index i:hover .down path {
     stroke: {color:text};
+}
+#stickers {
+    z-index: 2000!important;
+}
+#stickers img {
+    position: fixed;
+    width: 200px;
+    height: auto;
+}
+#stickers img:nth-child(1) {
+    top: -10px;
+    left: 200px;
+}
+#stickers img:nth-child(2) {
+    top: 250px;
+    left: 90px;
+}
+#stickers img:nth-child(3) {
+    top: 150px;
+    right: 200px;
+}
+#stickers img:nth-child(4) {
+    bottom: 100px;
+    left: 500px;
+}
+#stickers img:nth-child(5) {
+    top: 40px;
+    right: 450px;
 }
 
 /* slide content - anouk */
@@ -1043,7 +1148,10 @@ body.night #xinyu_4 img {
     -webkit-transition-duration: 0.75s;
 }
 .xinyu_wrap_3 {
-    margin: 50px 0;
+    margin: 25px 0 50px;
+}
+.xinyu_wrap_3 h2 {
+    margin-top: 50px;
 }
 .xinyu_wrap_4 img {
     margin: 50px 0 100px;
@@ -1068,7 +1176,7 @@ body.night .xinyu_wrap_4 img {
     text-align: center;
 }
 .pagi [class^="label_"] {
-    padding: 15px 20px;
+    padding: 15px 0;
     border-top: 1.5px solid {color:text};
     border-bottom: none;
     color: {color:background};
@@ -1095,6 +1203,7 @@ body.night .pagi [class^="label_"] {
     -o-transition-duration: 0.75s;
     -moz-transition-duration: 0.75s;
     -webkit-transition-duration: 0.75s;
+    cursor: url(https://i.imgur.com/YmCrZ2z.png),progress!important;
 }
 body.night .pagi [class^="label_"]:hover {
     color: {color:background};
@@ -1218,8 +1327,6 @@ body.night .tippy-tooltip.custom-theme {
     color: {color:text};
     background-color: {color:background};
 }
-.tippy-tooltip.custom-theme .tippy-svg-arrow { fill: {color:text}; }
-body.night .tippy-tooltip.custom-theme .tippy-svg-arrow { fill: {color:background}; }
 
 /* tumblr controls */
 iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
@@ -1235,6 +1342,14 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
 
 <!-- SLIDESHOW -->
 <div class="slideshow">
+
+<!-- notification box -->
+    <div class="notif">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';" title="close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></span> 
+        <p><b>Pro tip:</b> Hover over the stickers for a cool effect!</p>
+    </div>
+
+<!-- navigation -->
     <input hidden type="radio" name="slideshow" id="button_a" checked/>
     <input hidden type="radio" name="slideshow" id="button_b"/>
     <input hidden type="radio" name="slideshow" id="button_c"/>
@@ -1281,6 +1396,13 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
         <!-- slide index -->
             <section class="slide_index">
                 <div class="index">
+                    <div id="stickers">
+                        <img data-tilt data-tilt-max="20" data-tilt-transform="true" data-tilt-speed="500" data-tilt-perspective="400" src="{image:anouk}" />
+                        <img data-tilt data-tilt-max="20" data-tilt-transform="true" data-tilt-speed="500" data-tilt-perspective="400" src="{image:dan}" />
+                        <img data-tilt data-tilt-max="20" data-tilt-transform="true" data-tilt-speed="500" data-tilt-perspective="400" src="{image:luyi}" />
+                        <img data-tilt data-tilt-max="20" data-tilt-transform="true" data-tilt-speed="500" data-tilt-perspective="400" src="{image:orna}" />
+                        <img data-tilt data-tilt-max="20" data-tilt-transform="true" data-tilt-speed="500" data-tilt-perspective="400" src="{image:xinyu}" />
+                    </div>
                     <b>gmd year 1 • cyan • small team 5</b>
                     <h1>five<br>guys</h1>
                     <label for="button_b" class="label_b"><i>explore <div class="down"></div></i></label>
@@ -1292,8 +1414,7 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
                 <div class="anouk">
                     <h1>Huichol Beaded Bracelet</h1>
                     <div class="anouk_360">
-                        <img src="{image:anouk main}" alt="Huichol beaded bracelet" /> 
-                        <!-- PUT HTML 360 TABLE FILE HERE -->
+                        <img src="{image:anouk main}" />
                     </div>
                     <div class="sticker">
                         <img data-tilt data-tilt-max="20" data-tilt-transform="true" data-tilt-speed="500" data-tilt-perspective="400" src="{image:anouk}" />
@@ -1304,17 +1425,17 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
                         </div>
                         <div id="anouk_2">
                             <h2>description</h2>
-                            <p>A souvenir bracelet bought from a Mexican gift shop. Inspired by traditional Huichol beadwork, an art form developed by the north-western Indigenous peoples of Mexico. The bracelet depicts a woman wearing skull Day of the Dead makeup.</p>
+                                <p>{text:anouk desc}</p>
                             <h2>Personal Meaning</h2>
-                            <p>Represents my love for travel; I have a lot of souvenirs from a bunch of different places but this one is one of my favorites.</p>
+                                <p>{text:anouk meaning}</p>
                         </div>
                     </div>
                     <div class="anouk_wrap_2">
                         <div id="anouk_3">
                             <h2>Material Analysis</h2>
-                            <p>Text</p>
+                                <p>{text:anouk material}</p>
                             <h2>Contextual Analysis</h2>
-                            <p>Beadwork art in Mexico is usually called Huichol beadwork as it was created and popularized by the Huichol, a group of several indigenous peoples. Huichol art also includes yarn painting; they use a vibrant rainbow of colors and depict either traditional symbols or non-traditional. My object specifically depicts a woman’s face in skull makeup, or a calavera. Sugar skulls & skulls in general hold a lot of importance in Mexican culture - ancient tradition included offering skulls to the god of the underworld, Mictlantecuhtli. Spanish colonization erased most of these traditions but they were kept alive by maintaining the symbol of a skull in a sweet candy (sugar skulls) - an entire holiday revolves around skulls & paying respects to the dead (Dia de Muertos).</p>
+                                <p>{text:anouk context}</p>
                         </div>
                         <div id="anouk_4">
                             <img src="{image:anouk sub 1}" alt="Huichol beaded bracelet" />
@@ -1326,11 +1447,11 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
                     <div class="anouk_wrap_3">
                         <div id="anouk_5">
                             <h2>Museum description</h2>
-                            <p>A souvenir bracelet bought from a Mexican gift shop. Inspired by traditional Huichol beadwork, an art form developed by the north-western Indigenous peoples of Mexico. The bracelet above (c. 2021) depicts a woman wearing skull makeup, presumably for the Day of the Dead. Artist unknown.</p>
+                                <p>{text:anouk museum}</p>
                         </div>
                         <div id="anouk_6">
                             <h2>Ebay description</h2>
-                            <p>Mexican beaded bracelet in perfect condition, never worn. Previously used as well decoration but can be tied to a wrist / ankle. Beautiful depiction of a woman wearing skull makeup, bought in a Playa del Carmen gift shop. Please ask for more pictures, open to offers.</p>
+                                <p>{text:anouk ebay}</p>
                         </div>
                     </div>
                     <div class="anouk_wrap_4">
@@ -1369,9 +1490,9 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
                     <div class="dan_wrap">
                         <div id="dan_1">
                             <h2>description</h2>
-                            <p>A somewhat worn deck of cards measuring X cm tall, X cm wide, and X cm deep. Its base color is black, though it has been covered with Eastern Orthodox-style lineart in both maroon and gold. Each card within is different, with its design drawn in accord with the card’s specific meaning. There are 78 cards, 22 of which are the Major Arcana, with the remaining 56 split into four suits; swords, cups, pentacles, and wands. It also includes a guidebook that describes Tarot as a practice, the definition of each card, and the creator’s personal relationship with Tarot.</p>
+                            <p>{text:dan desc}</p>
                             <h2>Personal Meaning</h2>
-                            <p>This tarot deck was given to me by my mother, something she bought in the 1980s at a pawn shop in San Fransisco. Its meaningfulness is for me rooted in my personal interest in the subjects regarding the cards; culture, linguistics, and mythology. I also find its relatively recent surge in popularity, especially online, to be particularly interesting. In more specific terms, something so heavily associated with the occult and pagan practices has been appropriated for a Western European, Christian audience. Coupled with the creator’s—Alexander Egorov—hedonistic descriptions of both himself (calling himself “The Sun Genuis”, which he also renames one of the cards) and the practice of reading Tarot itself, forces one to imagine that Egorov wanted nothing more than for a greater audience to take on this spiritual practice after him and revere him for it. </p>
+                            <p>{text:dan meaning}</p>
                         </div>
                         <div id="dan_2">
                             <img src="{image:dan main}" alt="Egorov tarot cards" />
@@ -1387,12 +1508,11 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
                         <div id="dan_4">
                             <div id="dan_4_sub">
                                 <h2>Material analysis</h2>
-                                <p>Drawn with rich colors and gold accents in an Eastern Orthodox style, the artistic origin of the drawings, and its creator, both lie in Russia, though the cards themselves are written in English, German, and French. All ironic considering Tarot’s Italian origins. It’s Christianized, so many of the titles of the Major Arcana have been exchanged. For example, the High Priestess is instead "the Science", the Empress is "Fertility", and the Emperor is "Man of Knowledge", etc. It’s particularly rare, as I imagine not many copies were ever printed, with any selling online (and I have only found two) for over $200.</p>
+                                <p>{text:dan material}</p>
                             </div>
                             <div id="dan_4_sub_1">
                                 <h2>Contextual analysis</h2>
-                                <p>All of these things combined lead to something that is, to me, quite remarkable. That this deck of cards sits at the intersection of tradition, religion, and culture, and was important enough to someone that it might stand the test of all three. Tarot has its origins as a playing card as well as for practices like divination—which would have been considered witchcraft—but is styled to be accepted by western European Christians, using a Russian art style.
-</p>
+                                <p>{text:dan context}</p>
                             </div>
                         </div>
                     </div>
@@ -1402,11 +1522,11 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
                     <div class="dan_wrap_4">
                         <div id="dan_5">
                             <h2>Museum description</h2>
-                            <p>Originally printed in the 1970s, this 1997 edition of the Egorov Tarot cards are a result of a deeply fascination clash of cultures. Written in several different western European languagnes, though drawn in a style indicative of the Eastern Orthodox Church, this medium of divintation—while often associated with the occult and pagan practices—has been Christianized. An appeal to greater audiences, and if shown by nothing else than the borderline self-indulgent means by which Alexander Egorov wrote about himself and his practice, it is clear that Egorov hoped to reach more acclaim than he ever actually did.</p>
+                            <p>{text:dan museum}</p>
                         </div>
                         <div id="dan_6">
                             <h2>Ebay description</h2>
-                            <p>Well-loved set of rare Egorov Tarot cards. Box is well worn but cards and guide are in mint condition, save for a single dogear wrinkle on the guide’s front page. This deck is Christianized and written in English, French and German. Do note that guide is only in English. May be of a special interest to card/tarot collectors.</p>
+                            <p>{text:dan ebay}</p>
                         </div>
                     </div>
                 </div>
@@ -1442,7 +1562,7 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
                     <div class="luyi_wrap">
                         <div id="luyi_1">
                             <h2>description</h2>
-                            <p>A Chinese zodiac necklace that was a birthday present from my dad.</p>
+                                <p>{text:luyi desc}</p>
                         </div>
                         <div id="luyi_2">
                             <img src="{image:luyi sub 1}" alt="Chinese Zodiac bracelet" />
@@ -1453,25 +1573,25 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
                     </div>
                     <div class="luyi_wrap_2">
                         <h2>Personal Meaning</h2>
-                        <p>One of the words in my name is ‘璐’, which represents the meaning of the beautiful jade. I was born in 2004,  so according to the Chinese zodiac, I belong to the sheep, so this jade is carved in the shape of a ram. Ram also was associated with peace, so it’s also one of the reasons my dad chose this for me.</p>
+                            <p>{text:luyi meaning}</p>
                     </div>
                     <div class="luyi_wrap_3">
                         <img src="{image:luyi main}" alt="Chinese Zodiac bracelet" />
                         <div id="luyi_3">
                             <h2>Material analysis</h2>
-                            <p>Jade is a mineral used as jewellery or for ornament often carved in delicate textures. It is typically green or white, sometimes turquoise. When the light shines directly on the jade, textures in it can be found.</p>
+                                <p>{text:luyi material}</p>
                             <h2>Contextual analysis</h2>
-                            <p>Usually represent people’s status during ancient chinese, nowadays people usually wear it as accessories.</p>
+                                <p>{text:luyi context}</p>
                         </div>
                     </div>
                     <div class="luyi_wrap_4">
                         <div id="luyi_4">
                             <h2>Museum description</h2>
-                            <p>Text.</p>
+                                <p>{text:luyi museum}</p>
                         </div>
                         <div id="luyi_5">
                             <h2>Ebay description</h2>
-                            <p>Text.</p>
+                                <p>{text:luyi ebay}</p>
                         </div>
                     </div>
                     <div class="luyi_wrap_5">
@@ -1516,18 +1636,17 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
                         </div>
                         <div id="orna_2">
                             <h2>Description</h2>
-                            <p>Silver ring with adjustable arms forming a ‘hug.'</p>
+                                <p>{text:orna desc}</p>
                             <h2>Personal meaning</h2>
-                            <p>This is a ring I gifted to myself. It was in a time of loneliness when I first moved away from home. I found the ring warming as it reminded me of a ‘hug.’ The ring symbolises strength from within.</p>
+                                <p>{text:orna meaning}</p>
                         </div>
                     </div>
                     <div class="orna_wrap_2">
                         <div id="orna_3">
                             <h2>Material analysis</h2>
-                            <p>It is 92.5% silver, 7.5% other metals.</p>
+                                <p>{text:orna material}</p>
                             <h2>Contextual analysis</h2>
-                            <p>I do not know the history of the ring, and I can also presume it has none (at least none of great interest). I purchased it in Camden Markets at the beginning of this year. Prior to this it was more than likely produced in bulk and shipped for sale. It is a result of consumerism. 
-</p>
+                                <p>{text:orna context}</p>
                         </div>
                         <div id="orna_4">
                             <img src="{image:orna main}" alt="Silver Hug Ring" /> 
@@ -1536,11 +1655,11 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
                     <div class="orna_wrap_3">
                         <div id="orna_5">
                             <h2>Museum description</h2>
-                            <p>Text.</p>
+                                <p>{text:orna museum}</p>
                         </div>
                         <div id="orna_6">
                             <h2>Ebay description</h2>
-                            <p>Text.</p>
+                                <p>{text:orna ebay}</p>
                         </div>
                     </div>
                     <div class="orna_wrap_4">
@@ -1559,7 +1678,7 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
                             <b>made with <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> by five guys</b>
                         </div>
                         <div id="github">
-                            <a href="https://raw.githubusercontent.com/engelthm/introgmd5/main/code/five%20guys" title="View the code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                            <a href="https://raw.githubusercontent.com/engelthm/introgmd5/main/code/five%20guys" title="View the code" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
                         </div>
                     </div>
                 </div>
@@ -1579,13 +1698,13 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
                     <div class="xinyu_wrap">
                         <div id="xinyu_1">
                             <h2>description</h2>
-                            <p>Namo Amitabha Amulet which means someone is protecting me.It is an equivalent of a Buddhist token.</p>
+                                <p>{text:xinyu desc}</p>
                         </div>
                         <div id="xinyu_2">
                             <img src="{image:xinyu main}" alt="Namo Amitabha amulet" /> 
                             <div id="xinyu_2_sub">
                                 <h2>Personal meaning</h2>
-                                <p>It was given to me by my mother as a way of showing my family how much they care about me. This is a Chinese religion. Parents/relatives/friends kneel before the Buddha’s image in reverence. This is a way I can receive blessings from the status of Buddha.</p>
+                                    <p>{text:xinyu meaning}</p>
                             </div>
                         </div>
                     </div>
@@ -1593,11 +1712,11 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
                         <div id="xinyu_3">
                             <div id="xinyu_3_sub">
                                 <h2>Material analysis</h2>
-                                <p>Perhaps fake gold, given that the ancients believe that gold and silver jewellery has a role in warding off evil spirits. So this aspect has continued to this day.</p>
+                                    <p>{text:xinyu material}</p>
                             </div>
                             <div id="xinyu_3_sub_1">
                                 <h2>Contextual analysis</h2>
-                                <p>The necklace comes from Wenzhou temple, which is my hometown. Temples are a form of Buddhist architecture. A temple is a place of Buddhist veneration, which is not to be invaded.</p>
+                                    <p>{text:xinyu context}</p>
                             </div>
                         </div>
                         <div id="xinyu_4">
@@ -1610,11 +1729,11 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
                     <div class="xinyu_wrap_3">
                         <div id="xinyu_5">
                             <h2>Museum description</h2>
-                            <p>Text.</p>
+                                <p>{text:xinyu museum}</p>
                         </div>
                         <div id="xinyu_6">
                             <h2>Ebay description</h2>
-                            <p>Text.</p>
+                                <p>{text:xinyu ebay}</p>
                         </div>
                     </div>
                     <div class="xinyu_wrap_4">
@@ -1647,7 +1766,7 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
 <!-- bodymovin --> <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
 <!-- tippy.js --> <script src="https://unpkg.com/popper.js@1"></script><script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
 <!-- tilt.js --> <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-<!-- lightbox --> <script src="magnific-popup/jquery.magnific-popup.js"></script>
+<!-- 360 imports --> 
 
 <script> 
 // toggle light/dark mode
@@ -1698,7 +1817,7 @@ let animationToggle = bodymovin.loadAnimation({
 // tippy.js
 tippy('[title]', {
     theme: 'custom',
-    arrow: tippy.roundArrow,
+    arrow: false,
     followCursor: true,
     inertia: true,
     zIndex: 9999999999,
@@ -1724,23 +1843,8 @@ for (i = 0; i < navi.length; i++) {
     });
 }
 
-// lightbox
-$(document).ready(function() {
-    $('.lightbox').magnificPopup({
-		type: 'image',
-		closeOnContentClick: true,
-		closeBtnInside: false,
-		fixedContentPos: true,
-		mainClass: 'mfp-no-margins mfp-with-zoom',
-		image: {
-			verticalFit: true
-		},
-		zoom: {
-			enabled: true,
-			duration: 300 
-		}
-	});
-});
+// 360 spin controls
+
 
 // removes tumblr redirects
 function noHrefLi(){
