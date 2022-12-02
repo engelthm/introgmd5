@@ -32,6 +32,7 @@
 <meta name="image:xinyu" content="" />
 
 <meta name="image:anouk main" content="" />
+<meta name="image:anouk sub" content="" />
 <meta name="image:anouk sub 1" content="" />
 <meta name="image:anouk sub 2" content="" />
 <meta name="image:anouk sub 3" content="" />
@@ -39,6 +40,7 @@
 <meta name="image:anouk sub 5" content="" />
 
 <meta name="image:dan main" content="" />
+<meta name="image:dan sub" content="" />
 <meta name="image:dan sub 1" content="" />
 <meta name="image:dan sub 2" content="" />
 <meta name="image:dan sub 3" content="" />
@@ -46,6 +48,7 @@
 <meta name="image:dan sub 5" content="" />
 
 <meta name="image:luyi main" content="" />
+<meta name="image:luyi sub" content="" />
 <meta name="image:luyi sub 1" content="" />
 <meta name="image:luyi sub 2" content="" />
 <meta name="image:luyi sub 3" content="" />
@@ -53,6 +56,7 @@
 <meta name="image:luyi sub 5" content="" />
 
 <meta name="image:orna main" content="" />
+<meta name="image:orna sub" content="" />
 <meta name="image:orna sub 1" content="" />
 <meta name="image:orna sub 2" content="" />
 <meta name="image:orna sub 3" content="" />
@@ -60,6 +64,7 @@
 <meta name="image:orna sub 5" content="" />
 
 <meta name="image:xinyu main" content="" />
+<meta name="image:xinyu sub" content="" />
 <meta name="image:xinyu sub 1" content="" />
 <meta name="image:xinyu sub 2" content="" />
 <meta name="image:xinyu sub 3" content="" />
@@ -123,7 +128,7 @@
 <!-- fonts --> <link rel="stylesheet" href="https://use.typekit.net/bzk4ibc.css">
 <!-- tippy.js --> <link rel="stylesheet" href="https://unpkg.com/tippy.js@5/dist/svg-arrow.css"/>
 <!-- tilt.js --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js" />
-<!-- lightbox --> <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+<!-- freezeframe.js --> <link rel="stylesheet" href="https://unpkg.com/freezeframe@3.0.10/build/css/freezeframe_styles.min.css">
 
 
 
@@ -625,16 +630,19 @@ body.night .xinyu_360 {
     font-size: 17em;
     line-height: 70%;
     margin-bottom: 75px;
+    z-index: 50;
 }
 .index b {
     font-size: 0.75em;
     font-weight: 500;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    z-index: 50;
 }
 .index [class^="label_"], .index [class^="label_"]:hover {
     border: none;
     background-color: transparent;
+    z-index: 50;
 }
 body.night .index [class^="label_"], body.night .index [class^="label_"]:hover {
     border: none;
@@ -657,6 +665,7 @@ body.night .index [class^="label_"], body.night .index [class^="label_"]:hover {
     -o-transition-duration: 0.75s;
     -moz-transition-duration: 0.75s;
     -webkit-transition-duration: 0.75s;
+    z-index: 50;
 }
 body.night .index i {
     border: 1.5px solid {color:background};
@@ -1421,7 +1430,7 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
                     </div>
                     <div class="anouk_wrap">
                         <div id="anouk_1">
-                            <a class="lightbox" href="#!"><img src="{image:anouk main}" alt="Huichol beaded bracelet" /></a>
+                            <img src="{image:anouk sub}" alt="Huichol beaded bracelet" />
                         </div>
                         <div id="anouk_2">
                             <h2>description</h2>
@@ -1495,7 +1504,7 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
                             <p>{text:dan meaning}</p>
                         </div>
                         <div id="dan_2">
-                            <img src="{image:dan main}" alt="Egorov tarot cards" />
+                            <img src="{image:dan sub}" alt="Egorov tarot cards" />
                         </div>
                     </div>
                     <div class="dan_wrap_2">
@@ -1576,7 +1585,7 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
                             <p>{text:luyi meaning}</p>
                     </div>
                     <div class="luyi_wrap_3">
-                        <img src="{image:luyi main}" alt="Chinese Zodiac bracelet" />
+                        <img src="{image:luyi sub}" alt="Chinese Zodiac bracelet" />
                         <div id="luyi_3">
                             <h2>Material analysis</h2>
                                 <p>{text:luyi material}</p>
@@ -1649,7 +1658,7 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
                                 <p>{text:orna context}</p>
                         </div>
                         <div id="orna_4">
-                            <img src="{image:orna main}" alt="Silver Hug Ring" /> 
+                            <img src="{image:orna sub}" alt="Silver Hug Ring" /> 
                         </div>
                     </div>
                     <div class="orna_wrap_3">
@@ -1701,7 +1710,7 @@ iframe.tmblr-iframe, .tmblr-iframe--app-cta-button { display: none!important; }
                                 <p>{text:xinyu desc}</p>
                         </div>
                         <div id="xinyu_2">
-                            <img src="{image:xinyu main}" alt="Namo Amitabha amulet" /> 
+                            <img src="{image:xinyu sub}" alt="Namo Amitabha amulet" /> 
                             <div id="xinyu_2_sub">
                                 <h2>Personal meaning</h2>
                                     <p>{text:xinyu meaning}</p>
