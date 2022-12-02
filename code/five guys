@@ -12,7 +12,6 @@
                 icons by useanimations (lottiefiles w/bodymovin)
                 tooltips by tippy.js
                 sticker animation by tilt.js
-                lighboxes by magnific popup
                 
                 HOSTED ON TUMBLR.COM
                 
@@ -128,7 +127,6 @@
 <!-- fonts --> <link rel="stylesheet" href="https://use.typekit.net/bzk4ibc.css">
 <!-- tippy.js --> <link rel="stylesheet" href="https://unpkg.com/tippy.js@5/dist/svg-arrow.css"/>
 <!-- tilt.js --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js" />
-<!-- freezeframe.js --> <link rel="stylesheet" href="https://unpkg.com/freezeframe@3.0.10/build/css/freezeframe_styles.min.css">
 
 
 
@@ -1851,9 +1849,6 @@ for (i = 0; i < navi.length; i++) {
         } 
     });
 }
-
-// 360 spin controls
-
 
 // removes tumblr redirects
 function noHrefLi(){
